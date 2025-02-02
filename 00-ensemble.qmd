@@ -1,0 +1,51 @@
+# AI-Ensemble
+
+The AI Notebook is part of a larger AI Ensemble that processes and analyzes documents using multiple AI models and tools.
+
+```{mermaid}
+graph TD
+    A[Documents] --> B[AI Notebook]
+    B --> C[Text Processing]
+    B --> D[Audio Processing]
+    C --> E[Claude Models]
+    C --> F[Gemini Models]
+    C --> G[GPT Models]
+    D --> H[Whisper]
+    D --> I[Gemini Audio]
+    E --> J[Results]
+    F --> J
+    G --> J
+    H --> J
+    I --> J
+    J --> K[Visualization]
+```
+
+## Components
+
+1. **Document Processing**
+   - Text documents
+   - Audio files
+   - Images
+   - Markdown/QMD files
+
+2. **AI Models**
+   - Text Processing
+     - Claude 3 (Haiku, Sonnet)
+     - Gemini Pro/2
+     - GPT Models
+   - Audio Processing
+     - Whisper
+     - Gemini Audio
+
+3. **Output Generation**
+   - Structured JSON responses
+   - Visual analysis notebooks
+   - Interactive visualizations
+
+## Integration
+
+The AI Notebook serves as the central integration point, coordinating:
+- Model selection and configuration
+- Template management
+- Response processing
+- Result visualization 

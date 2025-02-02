@@ -1,0 +1,402 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI Notebook Documentation",
+    "section": "",
+    "text": "1 Introduction\nAI Notebook is a tool for processing notebooks with AI-enhanced blocks and audio files. It supports multiple AI providers and offers a flexible template system for structured prompts.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#text-processing",
+    "href": "index.html#text-processing",
+    "title": "AI Notebook Documentation",
+    "section": "4.1 Text Processing",
+    "text": "4.1 Text Processing\nCreate a QMD file with AI blocks:\n---\nmodel: claude-haiku\ntemplate:\n  file: analyze.j2\n  variables:\n    TEXT: document.txt\n---\nYour instruction here",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#audio-processing",
+    "href": "index.html#audio-processing",
+    "title": "AI Notebook Documentation",
+    "section": "4.2 Audio Processing",
+    "text": "4.2 Audio Processing\nProcess audio files using supported models:\naiaudio file.mp3 --model whisper\naiaudio file.mp3 --model gemini-pro",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#basic-templates",
+    "href": "index.html#basic-templates",
+    "title": "AI Notebook Documentation",
+    "section": "5.1 Basic Templates",
+    "text": "5.1 Basic Templates\nSingle template usage:\n---\nmodel: gemini-2\ntemplate:\n  file: translate.j2\n  variables:\n    TEXT: transcript\n    LANG: \"German\"\n---\nAdditional instructions",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#multiple-templates",
+    "href": "index.html#multiple-templates",
+    "title": "AI Notebook Documentation",
+    "section": "5.2 Multiple Templates",
+    "text": "5.2 Multiple Templates\nCombine multiple templates:\n---\nmodel: claude-sonnet\ntemplate:\n  - file: analyze.j2\n    variables:\n      TEXT: document.txt\n      STYLE: \"academic\"\n  - file: summarize.j2\n    variables:\n      LENGTH: \"short\"\n---",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "00-ensemble.html",
+    "href": "00-ensemble.html",
+    "title": "1  AI-Ensemble",
+    "section": "",
+    "text": "1.1 Components\nThe AI Notebook is part of a larger AI Ensemble that processes and analyzes documents using multiple AI models and tools.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>AI-Ensemble</span>"
+    ]
+  },
+  {
+    "objectID": "00-ensemble.html#components",
+    "href": "00-ensemble.html#components",
+    "title": "1  AI-Ensemble",
+    "section": "",
+    "text": "Document Processing\n\nText documents\nAudio files\nImages\nMarkdown/QMD files\n\nAI Models\n\nText Processing\n\nClaude 3 (Haiku, Sonnet)\nGemini Pro/2\nGPT Models\n\nAudio Processing\n\nWhisper\nGemini Audio\n\n\nOutput Generation\n\nStructured JSON responses\nVisual analysis notebooks\nInteractive visualizations",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>AI-Ensemble</span>"
+    ]
+  },
+  {
+    "objectID": "00-ensemble.html#integration",
+    "href": "00-ensemble.html#integration",
+    "title": "1  AI-Ensemble",
+    "section": "1.2 Integration",
+    "text": "1.2 Integration\nThe AI Notebook serves as the central integration point, coordinating: - Model selection and configuration - Template management - Response processing - Result visualization",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>AI-Ensemble</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html",
+    "href": "01-structure.html",
+    "title": "3  AI Notebook Structure",
+    "section": "",
+    "text": "4 Package Structure\nai-notebook/\n├── src/\n│   └── ainotebook/\n│       ├── notebook.py      # Core processing\n│       ├── cli.py          # Command line interface\n│       ├── cli_quarto.py   # Visualization\n│       ├── settings.json   # Model configurations\n│       └── providers/      # AI model providers\n│           ├── anthropic.py\n│           ├── gemini.py\n│           ├── openai.py\n│           ├── groq.py\n│           └── ollama.py\n└── notebooks/             # Documentation\n    ├── 01-structure.qmd\n    ├── 02-models.qmd\n    └── 03-features.qmd\n\n\n5 Project Structure\nyour-project/\n├── notebooks/           # Source notebooks\n│   └── analysis.qmd    # Contains AI blocks\n├── process/            # Generated JSON files\n│   └── analysis.json   # Contains responses\n├── ai-views/           # Generated visualizations\n│   └── analysis-vis.qmd\n└── sources/           # Project resources\n    └── templates/     # Jinja2 templates\n        └── document.j2",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AI Notebook Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html",
+    "href": "02-models.html",
+    "title": "4  AI Models",
+    "section": "",
+    "text": "5 Available Models",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#anthropic-models",
+    "href": "02-models.html#anthropic-models",
+    "title": "4  AI Models",
+    "section": "5.1 Anthropic Models",
+    "text": "5.1 Anthropic Models\n\nclaude-3-opus (175K context)\nclaude-3-sonnet (200K context)\nclaude-3-haiku (200K context)\nclaude-haiku (alias for claude-3-haiku)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#google-models",
+    "href": "02-models.html#google-models",
+    "title": "4  AI Models",
+    "section": "5.2 Google Models",
+    "text": "5.2 Google Models\n\ngemini-pro\ngemini-2.0-flash-thinking-exp-01-21 (experimental)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#openai-models",
+    "href": "02-models.html#openai-models",
+    "title": "4  AI Models",
+    "section": "5.3 OpenAI Models",
+    "text": "5.3 OpenAI Models\n\ngpt-4\ngpt-4-turbo\ngpt-3.5-turbo",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#groq-models",
+    "href": "02-models.html#groq-models",
+    "title": "4  AI Models",
+    "section": "5.4 Groq Models",
+    "text": "5.4 Groq Models\n\nmixtral-8x7b-32768\nllama2-70b-4096",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#local-models-via-ollama",
+    "href": "02-models.html#local-models-via-ollama",
+    "title": "4  AI Models",
+    "section": "5.5 Local Models (via Ollama)",
+    "text": "5.5 Local Models (via Ollama)\nAny model available in your local Ollama installation.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "03-features.html",
+    "href": "03-features.html",
+    "title": "5  AI Notebook Features",
+    "section": "",
+    "text": "6 Label System",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>AI Notebook Features</span>"
+    ]
+  },
+  {
+    "objectID": "03-features.html#basic-usage",
+    "href": "03-features.html#basic-usage",
+    "title": "5  AI Notebook Features",
+    "section": "6.1 Basic Usage",
+    "text": "6.1 Basic Usage\nStore a response with a label:\n---\nmodel: gemini-pro\nlabel: my_analysis\n---\nAnalyze this text...\nReference within same notebook:\n---\nmodel: claude-haiku\n---\nImprove this analysis: {{my_analysis}}",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>AI Notebook Features</span>"
+    ]
+  },
+  {
+    "objectID": "03-features.html#cross-notebook-references",
+    "href": "03-features.html#cross-notebook-references",
+    "title": "5  AI Notebook Features",
+    "section": "6.2 Cross-Notebook References",
+    "text": "6.2 Cross-Notebook References\nReference responses from other notebooks:\n---\nmodel: gemini-pro\n---\nCompare:\n1. {{notebook1:analysis_1}}\n2. {{notebook2:analysis_2}}",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>AI Notebook Features</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html",
+    "href": "examples.html",
+    "title": "6  Usage Examples",
+    "section": "",
+    "text": "6.1 Basic Text Analysis\nThis section provides practical examples of using AI Notebook in different scenarios.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#basic-text-analysis",
+    "href": "examples.html#basic-text-analysis",
+    "title": "6  Usage Examples",
+    "section": "",
+    "text": "---\nmodel: claude-haiku\nlabel: initial_analysis\n---\nAnalyze the following text for key themes and arguments:\n\n{{document}}",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#template-based-processing",
+    "href": "examples.html#template-based-processing",
+    "title": "6  Usage Examples",
+    "section": "6.2 Template-Based Processing",
+    "text": "6.2 Template-Based Processing\n---\nmodel: gemini-pro\ntemplate:\n  file: academic_analysis.j2\n  variables:\n    TEXT: source.txt\n    STYLE: historical\n---",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#cross-reference-example",
+    "href": "examples.html#cross-reference-example",
+    "title": "6  Usage Examples",
+    "section": "6.3 Cross-Reference Example",
+    "text": "6.3 Cross-Reference Example\n---\nmodel: claude-sonnet\n---\nCompare and contrast these analyses:\n\n1. Initial Analysis: {{initial_analysis}}\n2. Historical Context: {{historical_context}}\n3. Modern Interpretation: {{modern_view}}",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#audio-processing-example",
+    "href": "examples.html#audio-processing-example",
+    "title": "6  Usage Examples",
+    "section": "6.4 Audio Processing Example",
+    "text": "6.4 Audio Processing Example\n# Transcribe and analyze an audio file\nfrom ainotebook import process_audio, analyze_text\n\n# First transcribe\ntranscript = process_audio(\n    \"lecture.mp3\",\n    model=\"whisper\",\n    language=\"en\"\n)\n\n# Then analyze the transcript\nanalysis = analyze_text(\n    transcript,\n    model=\"claude-haiku\",\n    template=\"lecture_analysis.j2\"\n)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#multi-model-analysis",
+    "href": "examples.html#multi-model-analysis",
+    "title": "6  Usage Examples",
+    "section": "6.5 Multi-Model Analysis",
+    "text": "6.5 Multi-Model Analysis\n---\nmodel: claude-sonnet\nlabel: expert_analysis\n---\nProvide expert analysis of this topic.\n\n---\nmodel: gemini-pro\n---\nReview and enhance this analysis: {{expert_analysis}}\n\n---\nmodel: gpt-4\n---\nSynthesize both perspectives:\n1. Expert Analysis: {{expert_analysis}}\n2. Enhanced Analysis: {{previous}}",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#project-structure-example",
+    "href": "examples.html#project-structure-example",
+    "title": "6  Usage Examples",
+    "section": "6.6 Project Structure Example",
+    "text": "6.6 Project Structure Example\nresearch-project/\n├── notebooks/\n│   ├── data-analysis.qmd    # Contains AI blocks\n│   └── conclusions.qmd      # Uses cross-references\n├── process/\n│   ├── data-analysis.json   # Generated responses\n│   └── conclusions.json\n├── ai-views/\n│   └── analysis-vis.qmd     # Visualizations\n└── templates/\n    ├── analysis.j2\n    └── synthesis.j2",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#visualization-example",
+    "href": "examples.html#visualization-example",
+    "title": "6  Usage Examples",
+    "section": "6.7 Visualization Example",
+    "text": "6.7 Visualization Example\nfrom ainotebook import visualize\n\n# Create analysis dashboard\ndashboard = visualize.create_dashboard(\n    data_files=\"process/*.json\",\n    metrics=[\n        \"response_time\",\n        \"token_usage\",\n        \"model_distribution\"\n    ],\n    interactive=True\n)\n\n# Generate comparison report\nreport = visualize.create_report(\n    responses=[\"analysis_1\", \"analysis_2\"],\n    type=\"comparison\",\n    output=\"comparison-vis.qmd\"\n)\n\n\n\n:::{#quarto-navigation-envelope .hidden}\n[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl\"}\n[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1uYXZiYXItdGl0bGU=\"}\n[&lt;span class='chapter-number'&gt;7&lt;/span&gt;  &lt;span class='chapter-title'&gt;API Reference&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1uZXh0\"}\n[&lt;span class='chapter-number'&gt;5&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Notebook Features&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1wcmV2\"}\n[&lt;span class='chapter-number'&gt;1&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI-Ensemble&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMC1lbnNlbWJsZS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLUVuc2VtYmxlPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;2&lt;/span&gt;  &lt;span class='chapter-title'&gt;Introduction&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4yPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkludHJvZHVjdGlvbjwvc3Bhbj4=\"}\n[&lt;span class='chapter-number'&gt;3&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Notebook Structure&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMS1zdHJ1Y3R1cmUuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BSS1Ob3RlYm9vay1TdHJ1Y3R1cmU8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;4&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Models&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMi1tb2RlbHMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+NDwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BSS1Nb2RlbHM8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;5&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Notebook Features&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMy1mZWF0dXJlcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz41PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLU5vdGVib29rLUZlYXR1cmVzPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;6&lt;/span&gt;  &lt;span class='chapter-title'&gt;Usage Examples&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9leGFtcGxlcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz42PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlVzYWdlLUV4YW1wbGVzPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;7&lt;/span&gt;  &lt;span class='chapter-title'&gt;API Reference&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9yZWZlcmVuY2UuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Nzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BUEktUmVmZXJlbmNlPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;6&lt;/span&gt;  &lt;span class='chapter-title'&gt;Usage Examples&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Njwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Vc2FnZS1FeGFtcGxlczwvc3Bhbj4=\"}\n\n:::{.hidden .quarto-markdown-envelope-contents render-id=\"Zm9vdGVyLWNlbnRlcg==\"}\nCopyright 2025, Gerd Graßhoff\n:::\n\n\n:::{.hidden .quarto-markdown-envelope-contents render-id=\"bWFyZ2luLWhlYWRlcg==\"}\n\n:::{.margin-header-item}\n0\n:::\n\n:::\n\n:::\n\n\n\n:::{#quarto-meta-markdown .hidden}\n[[6]{.chapter-number}  [Usage Examples]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW1ldGF0aXRsZQ==\"}\n[[6]{.chapter-number}  [Usage Examples]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=\"}\n[[6]{.chapter-number}  [Usage Examples]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW9nY2FyZHRpdGxl\"}\n[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW1ldGFzaXRlbmFtZQ==\"}\n[]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==\"}\n[]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW9nY2FyZGRkZXNj\"}\n:::\n\n\n\n\n&lt;!-- --&gt;\n\n::: {.quarto-embedded-source-code}\n```````````````````{.markdown shortcodes=\"false\"}\n# Usage Examples\n\nThis section provides practical examples of using AI Notebook in different scenarios.\n\n## Basic Text Analysis\n\n```ai\n---\nmodel: claude-haiku\nlabel: initial_analysis\n---\nAnalyze the following text for key themes and arguments:\n\n{{document}}",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#template-based-processing-1",
+    "href": "examples.html#template-based-processing-1",
+    "title": "6  Usage Examples",
+    "section": "6.8 Template-Based Processing",
+    "text": "6.8 Template-Based Processing\n---\nmodel: gemini-pro\ntemplate:\n  file: academic_analysis.j2\n  variables:\n    TEXT: source.txt\n    STYLE: historical\n---",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#cross-reference-example-1",
+    "href": "examples.html#cross-reference-example-1",
+    "title": "6  Usage Examples",
+    "section": "6.9 Cross-Reference Example",
+    "text": "6.9 Cross-Reference Example\n---\nmodel: claude-sonnet\n---\nCompare and contrast these analyses:\n\n1. Initial Analysis: {{initial_analysis}}\n2. Historical Context: {{historical_context}}\n3. Modern Interpretation: {{modern_view}}",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#audio-processing-example-1",
+    "href": "examples.html#audio-processing-example-1",
+    "title": "6  Usage Examples",
+    "section": "6.10 Audio Processing Example",
+    "text": "6.10 Audio Processing Example\n# Transcribe and analyze an audio file\nfrom ainotebook import process_audio, analyze_text\n\n# First transcribe\ntranscript = process_audio(\n    \"lecture.mp3\",\n    model=\"whisper\",\n    language=\"en\"\n)\n\n# Then analyze the transcript\nanalysis = analyze_text(\n    transcript,\n    model=\"claude-haiku\",\n    template=\"lecture_analysis.j2\"\n)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#multi-model-analysis-1",
+    "href": "examples.html#multi-model-analysis-1",
+    "title": "6  Usage Examples",
+    "section": "6.11 Multi-Model Analysis",
+    "text": "6.11 Multi-Model Analysis\n---\nmodel: claude-sonnet\nlabel: expert_analysis\n---\nProvide expert analysis of this topic.\n\n---\nmodel: gemini-pro\n---\nReview and enhance this analysis: {{expert_analysis}}\n\n---\nmodel: gpt-4\n---\nSynthesize both perspectives:\n1. Expert Analysis: {{expert_analysis}}\n2. Enhanced Analysis: {{previous}}",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#project-structure-example-1",
+    "href": "examples.html#project-structure-example-1",
+    "title": "6  Usage Examples",
+    "section": "6.12 Project Structure Example",
+    "text": "6.12 Project Structure Example\nresearch-project/\n├── notebooks/\n│   ├── data-analysis.qmd    # Contains AI blocks\n│   └── conclusions.qmd      # Uses cross-references\n├── process/\n│   ├── data-analysis.json   # Generated responses\n│   └── conclusions.json\n├── ai-views/\n│   └── analysis-vis.qmd     # Visualizations\n└── templates/\n    ├── analysis.j2\n    └── synthesis.j2",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#visualization-example-1",
+    "href": "examples.html#visualization-example-1",
+    "title": "6  Usage Examples",
+    "section": "6.13 Visualization Example",
+    "text": "6.13 Visualization Example\nfrom ainotebook import visualize\n\n# Create analysis dashboard\ndashboard = visualize.create_dashboard(\n    data_files=\"process/*.json\",\n    metrics=[\n        \"response_time\",\n        \"token_usage\",\n        \"model_distribution\"\n    ],\n    interactive=True\n)\n\n# Generate comparison report\nreport = visualize.create_report(\n    responses=[\"analysis_1\", \"analysis_2\"],\n    type=\"comparison\",\n    output=\"comparison-vis.qmd\"\n)\n:::",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html",
+    "href": "reference.html",
+    "title": "7  API Reference",
+    "section": "",
+    "text": "7.1 Core Classes",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#core-classes",
+    "href": "reference.html#core-classes",
+    "title": "7  API Reference",
+    "section": "",
+    "text": "7.1.1 AINotebook\nMain class for notebook processing.\nclass AINotebook:\n    def __init__(self, api_keys=None, config_file=None):\n        \"\"\"Initialize AI Notebook.\n        \n        Args:\n            api_keys (dict): API keys for providers\n            config_file (str): Path to config file\n        \"\"\"\n        \n    def process_file(self, file_path, overwrite=False):\n        \"\"\"Process a notebook file.\n        \n        Args:\n            file_path (str): Path to QMD file\n            overwrite (bool): Force reprocessing\n        \"\"\"\n        \n    def process_audio(self, file_path, model=\"whisper\"):\n        \"\"\"Process an audio file.\n        \n        Args:\n            file_path (str): Path to audio file\n            model (str): Model to use\n        \"\"\"",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#configuration",
+    "href": "reference.html#configuration",
+    "title": "7  API Reference",
+    "section": "7.2 Configuration",
+    "text": "7.2 Configuration\n\n7.2.1 settings.json\n{\n  \"models\": {\n    \"claude-haiku\": {\n      \"provider\": \"anthropic\",\n      \"model\": \"claude-3-haiku\",\n      \"max_tokens\": 4096\n    },\n    \"gemini-pro\": {\n      \"provider\": \"google\",\n      \"model\": \"gemini-pro\",\n      \"max_tokens\": 8192\n    }\n  },\n  \"templates\": {\n    \"path\": \"templates\",\n    \"default_vars\": {\n      \"STYLE\": \"academic\",\n      \"LENGTH\": \"medium\"\n    }\n  }\n}\n\n\n7.2.2 Template Format\nname: template_name\ndescription: Template description\nvariables:\n  VAR1: string\n  VAR2: string\nprompt: |\n  Your prompt here with\n  {{VAR1}} and {{VAR2}}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#command-line-interface",
+    "href": "reference.html#command-line-interface",
+    "title": "7  API Reference",
+    "section": "7.3 Command Line Interface",
+    "text": "7.3 Command Line Interface\n\n7.3.1 Basic Commands\n# Process a notebook\nainotebook process notebook.qmd\n\n# Process audio\nainotebook audio recording.mp3 --model whisper\n\n# Generate visualization\nainotebook visualize results.json\n\n\n7.3.2 Options\n# Force reprocessing\nainotebook process --overwrite\n\n# Specify config\nainotebook process --config custom_config.json\n\n# Set model\nainotebook process --model claude-haiku",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#output-formats",
+    "href": "reference.html#output-formats",
+    "title": "7  API Reference",
+    "section": "7.4 Output Formats",
+    "text": "7.4 Output Formats\n\n7.4.1 JSON Response\n{\n  \"metadata\": {\n    \"file\": \"notebook.qmd\",\n    \"model\": \"claude-haiku\",\n    \"timestamp\": \"2024-03-15T10:30:00Z\"\n  },\n  \"blocks\": [\n    {\n      \"id\": \"block1\",\n      \"label\": \"analysis\",\n      \"model\": \"claude-haiku\",\n      \"prompt\": \"...\",\n      \"response\": \"...\",\n      \"tokens\": 1234\n    }\n  ]\n}\n\n\n7.4.2 Visualization Options\n# Available metrics\nmetrics = [\n    \"response_time\",\n    \"token_usage\",\n    \"model_distribution\",\n    \"cost_analysis\",\n    \"template_usage\"\n]\n\n# Chart types\nchart_types = [\n    \"bar\",\n    \"line\",\n    \"scatter\",\n    \"heatmap\",\n    \"network\"\n] \n\n\n\n:::{#quarto-navigation-envelope .hidden}\n[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl\"}\n[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1uYXZiYXItdGl0bGU=\"}\n[&lt;span class='chapter-number'&gt;6&lt;/span&gt;  &lt;span class='chapter-title'&gt;Usage Examples&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1wcmV2\"}\n[&lt;span class='chapter-number'&gt;1&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI-Ensemble&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMC1lbnNlbWJsZS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLUVuc2VtYmxlPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;2&lt;/span&gt;  &lt;span class='chapter-title'&gt;Introduction&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4yPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkludHJvZHVjdGlvbjwvc3Bhbj4=\"}\n[&lt;span class='chapter-number'&gt;3&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Notebook Structure&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMS1zdHJ1Y3R1cmUuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BSS1Ob3RlYm9vay1TdHJ1Y3R1cmU8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;4&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Models&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMi1tb2RlbHMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+NDwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BSS1Nb2RlbHM8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;5&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Notebook Features&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMy1mZWF0dXJlcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz41PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLU5vdGVib29rLUZlYXR1cmVzPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;6&lt;/span&gt;  &lt;span class='chapter-title'&gt;Usage Examples&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9leGFtcGxlcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz42PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlVzYWdlLUV4YW1wbGVzPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;7&lt;/span&gt;  &lt;span class='chapter-title'&gt;API Reference&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9yZWZlcmVuY2UuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Nzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BUEktUmVmZXJlbmNlPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;7&lt;/span&gt;  &lt;span class='chapter-title'&gt;API Reference&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Nzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BUEktUmVmZXJlbmNlPC9zcGFuPg==\"}\n\n:::{.hidden .quarto-markdown-envelope-contents render-id=\"Zm9vdGVyLWNlbnRlcg==\"}\nCopyright 2025, Gerd Graßhoff\n:::\n\n\n:::{.hidden .quarto-markdown-envelope-contents render-id=\"bWFyZ2luLWhlYWRlcg==\"}\n\n:::{.margin-header-item}\n0\n:::\n\n:::\n\n:::\n\n\n\n:::{#quarto-meta-markdown .hidden}\n[[7]{.chapter-number}  [API Reference]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW1ldGF0aXRsZQ==\"}\n[[7]{.chapter-number}  [API Reference]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=\"}\n[[7]{.chapter-number}  [API Reference]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW9nY2FyZHRpdGxl\"}\n[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW1ldGFzaXRlbmFtZQ==\"}\n[]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==\"}\n[]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW9nY2FyZGRkZXNj\"}\n:::\n\n\n\n\n&lt;!-- --&gt;\n\n::: {.quarto-embedded-source-code}\n```````````````````{.markdown shortcodes=\"false\"}\n# API Reference\n\n## Core Classes\n\n### AINotebook\n\nMain class for notebook processing.\n\n```python\nclass AINotebook:\n    def __init__(self, api_keys=None, config_file=None):\n        \"\"\"Initialize AI Notebook.\n        \n        Args:\n            api_keys (dict): API keys for providers\n            config_file (str): Path to config file\n        \"\"\"\n        \n    def process_file(self, file_path, overwrite=False):\n        \"\"\"Process a notebook file.\n        \n        Args:\n            file_path (str): Path to QMD file\n            overwrite (bool): Force reprocessing\n        \"\"\"\n        \n    def process_audio(self, file_path, model=\"whisper\"):\n        \"\"\"Process an audio file.\n        \n        Args:\n            file_path (str): Path to audio file\n            model (str): Model to use\n        \"\"\"",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#configuration-1",
+    "href": "reference.html#configuration-1",
+    "title": "7  API Reference",
+    "section": "7.5 Configuration",
+    "text": "7.5 Configuration\n\n7.5.1 settings.json\n{\n  \"models\": {\n    \"claude-haiku\": {\n      \"provider\": \"anthropic\",\n      \"model\": \"claude-3-haiku\",\n      \"max_tokens\": 4096\n    },\n    \"gemini-pro\": {\n      \"provider\": \"google\",\n      \"model\": \"gemini-pro\",\n      \"max_tokens\": 8192\n    }\n  },\n  \"templates\": {\n    \"path\": \"templates\",\n    \"default_vars\": {\n      \"STYLE\": \"academic\",\n      \"LENGTH\": \"medium\"\n    }\n  }\n}\n\n\n7.5.2 Template Format\nname: template_name\ndescription: Template description\nvariables:\n  VAR1: string\n  VAR2: string\nprompt: |\n  Your prompt here with\n  {{VAR1}} and {{VAR2}}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#command-line-interface-1",
+    "href": "reference.html#command-line-interface-1",
+    "title": "7  API Reference",
+    "section": "7.6 Command Line Interface",
+    "text": "7.6 Command Line Interface\n\n7.6.1 Basic Commands\n# Process a notebook\nainotebook process notebook.qmd\n\n# Process audio\nainotebook audio recording.mp3 --model whisper\n\n# Generate visualization\nainotebook visualize results.json\n\n\n7.6.2 Options\n# Force reprocessing\nainotebook process --overwrite\n\n# Specify config\nainotebook process --config custom_config.json\n\n# Set model\nainotebook process --model claude-haiku",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#output-formats-1",
+    "href": "reference.html#output-formats-1",
+    "title": "7  API Reference",
+    "section": "7.7 Output Formats",
+    "text": "7.7 Output Formats\n\n7.7.1 JSON Response\n{\n  \"metadata\": {\n    \"file\": \"notebook.qmd\",\n    \"model\": \"claude-haiku\",\n    \"timestamp\": \"2024-03-15T10:30:00Z\"\n  },\n  \"blocks\": [\n    {\n      \"id\": \"block1\",\n      \"label\": \"analysis\",\n      \"model\": \"claude-haiku\",\n      \"prompt\": \"...\",\n      \"response\": \"...\",\n      \"tokens\": 1234\n    }\n  ]\n}\n\n\n7.7.2 Visualization Options\n# Available metrics\nmetrics = [\n    \"response_time\",\n    \"token_usage\",\n    \"model_distribution\",\n    \"cost_analysis\",\n    \"template_usage\"\n]\n\n# Chart types\nchart_types = [\n    \"bar\",\n    \"line\",\n    \"scatter\",\n    \"heatmap\",\n    \"network\"\n] \n:::",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  }
+]

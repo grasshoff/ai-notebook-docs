@@ -1,0 +1,47 @@
+---
+title: "AI Models"
+author: "Gerd Graßhoff"
+date: "2025-01-15"
+format:
+  html:
+    theme: sandstone
+    toc: true
+    toc-location: left
+    number-sections: true
+    code-fold: true
+---
+
+# Available Models
+
+## Anthropic Models
+- `claude-3-opus` (175K context)
+- `claude-3-sonnet` (200K context)
+- `claude-3-haiku` (200K context)
+- `claude-haiku` (alias for claude-3-haiku)
+
+## Google Models
+- `gemini-pro`
+- `gemini-2.0-flash-thinking-exp-01-21` (experimental)
+
+## OpenAI Models
+- `gpt-4`
+- `gpt-4-turbo`
+- `gpt-3.5-turbo`
+
+## Groq Models
+- `mixtral-8x7b-32768`
+- `llama2-70b-4096`
+
+## Local Models (via Ollama)
+Any model available in your local Ollama installation.
+
+# Model Configuration
+
+```yaml
+---
+model: claude-haiku  # Use model alias from settings.json
+overwrite: false     # Skip if response exists
+label: my_analysis   # Optional label for referencing
+---
+Your prompt here...
+``` 

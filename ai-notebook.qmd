@@ -1,0 +1,125 @@
+---
+title: AI-Notebooks
+author: Gerd Graßhoff
+date: "2025-01-15"
+format:
+  html:
+    theme: sandstone
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    highlight-style: github
+    fig-width: 8
+    fig-height: 6
+    fig-format: png
+    fig-dpi: 300
+    embed-resources: true
+filters:
+  - ai-format
+---
+
+# AI-Notebooks
+
+## Blocks
+
+The document comprises three distinct types of text blocks:
+
+- Standard text formatted in Quarto markdown, which supports LaTeX mathematical notation and advanced scholarly features such as footnotes, bibliographies and citations.
+
+- YAML configuration blocks, demarcated by "---" delimiters, which can appear either independently or within AI instruction blocks.
+
+- AI instruction blocks, which begin with three backticks followed by "ai" (```ai) and conclude with three backticks (```).
+
+For all other textual elements and formatting requirements, the full range of Quarto markdown syntax is available to enhance the document's presentation and structure.
+
+# AI Processor
+
+Der Ai-Processor parsed den text eines Ai-Notebooks, erkennt die ai instruction blocks und strukturiert diese in eine Instruktion. Der AI-Processor ist ein open access python modul, programmatisch die Abfolge von Instruktionen auszuführen und die Ergebnisse jeder Ausführung gemäß den Anweisungen entweder in ein Notebook einzuführen oder andere Ausgaben zu erzeugen.
+
+```ai
+---
+model: gemini-2.0-flash-exp
+preamble: Gebe ohne preamble nur die antwort auf die Frage.
+title: processor
+---
+Gebe die Lebensdaten des Preussenkönigs Friedrich II aus. Füge die Lebensdaten
+von Leonhard Euler hinzu und gebe die Daten an, wann Euler in Preußen und St.
+Petersburg war.
+
+```
+
+
+```ai
+---
+model: gemini-2.0-flash-exp
+processing: False
+---
+Mit wem war Euler verheiratet? Gebe alle Frauen und die Daten von Hochzeit bis zum Tod an.
+```
+
+
+```ai
+---
+model: gemini-2.0-flash-exp
+preamble: Gebe ohne preamble nur die antwort auf die Frage
+processing: False
+---
+Gebe eine Liste der ersten 20 Primzahlen aus.
+```
+
+
+```ai
+---
+model: claude-3-5-haiku
+preamble: Gebe ohne preamble nur die antwort auf die Frage
+---
+Übersetze ins English: Du unterirdischer Idiot.
+```
+
+
+
+
+
+
+
+
+
+# Cursor Agent instruction
+
+Create a python class AI-Notebook, which imports a notebook in utf8-text, parses its blocks, executes the code blocks, inserts the result of the execution into the notebook as quarto output block right after the execution block, or side effects outside the notebook, and creates a new notebook instead of the input notebook.
+
+all yaml blocks are parsed with key values as key value of a dict lettreai. keys are parsed in their sequentical order and overwrite keys if they are defined more than once.
+
+templates are jinja content which might have jinja variables in double curly brackets like "{{model}}", The parser uses the lettreai dict to replace the variables with the values of the same key in the lettreai dict.
+
+The main file of the ai-notebook take the filename of the ai-notebook as input variable, loads, processes and replaces the ai-notebook
+
+# Python Processor
+
+```python
+import os
+import google.generativeai as genai
+
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+
+# Create the model
+generation_config = {
+  "temperature": 1,
+  "top_p": 0.95,
+  "top_k": 64,
+  "max_output_tokens": 8192,
+  "response_mime_type": "text/plain",
+}
+
+model = genai.GenerativeModel(
+  model_name="gemini-2.0-flash-thinking-exp-1219",
+  generation_config=generation_config,
+)
+
+response = model.generate_content("INSERT_INPUT_HERE")
+
+print(response.text)
+```

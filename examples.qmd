@@ -1,0 +1,124 @@
+# Usage Examples
+
+This section provides practical examples of using AI Notebook in different scenarios.
+
+## Basic Text Analysis
+
+```ai
+---
+model: claude-haiku
+label: initial_analysis
+---
+Analyze the following text for key themes and arguments:
+
+{{document}}
+```
+
+## Template-Based Processing
+
+```ai
+---
+model: gemini-pro
+template:
+  file: academic_analysis.j2
+  variables:
+    TEXT: source.txt
+    STYLE: historical
+---
+```
+
+## Cross-Reference Example
+
+```ai
+---
+model: claude-sonnet
+---
+Compare and contrast these analyses:
+
+1. Initial Analysis: {{initial_analysis}}
+2. Historical Context: {{historical_context}}
+3. Modern Interpretation: {{modern_view}}
+```
+
+## Audio Processing Example
+
+```python
+# Transcribe and analyze an audio file
+from ainotebook import process_audio, analyze_text
+
+# First transcribe
+transcript = process_audio(
+    "lecture.mp3",
+    model="whisper",
+    language="en"
+)
+
+# Then analyze the transcript
+analysis = analyze_text(
+    transcript,
+    model="claude-haiku",
+    template="lecture_analysis.j2"
+)
+```
+
+## Multi-Model Analysis
+
+```ai
+---
+model: claude-sonnet
+label: expert_analysis
+---
+Provide expert analysis of this topic.
+
+---
+model: gemini-pro
+---
+Review and enhance this analysis: {{expert_analysis}}
+
+---
+model: gpt-4
+---
+Synthesize both perspectives:
+1. Expert Analysis: {{expert_analysis}}
+2. Enhanced Analysis: {{previous}}
+```
+
+## Project Structure Example
+
+```
+research-project/
+├── notebooks/
+│   ├── data-analysis.qmd    # Contains AI blocks
+│   └── conclusions.qmd      # Uses cross-references
+├── process/
+│   ├── data-analysis.json   # Generated responses
+│   └── conclusions.json
+├── ai-views/
+│   └── analysis-vis.qmd     # Visualizations
+└── templates/
+    ├── analysis.j2
+    └── synthesis.j2
+```
+
+## Visualization Example
+
+```python
+from ainotebook import visualize
+
+# Create analysis dashboard
+dashboard = visualize.create_dashboard(
+    data_files="process/*.json",
+    metrics=[
+        "response_time",
+        "token_usage",
+        "model_distribution"
+    ],
+    interactive=True
+)
+
+# Generate comparison report
+report = visualize.create_report(
+    responses=["analysis_1", "analysis_2"],
+    type="comparison",
+    output="comparison-vis.qmd"
+)

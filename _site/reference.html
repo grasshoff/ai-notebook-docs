@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.13">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; API Reference – AI Notebook Documentation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./examples.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-df3ac9073599986294047197e6681a0a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./reference.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">API Reference</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">
+      AI Notebook Documentation
+      </a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-ensemble.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">AI-Ensemble</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">AI Notebook Structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AI Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-features.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">AI Notebook Features</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Usage Examples</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reference.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">API Reference</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#core-classes" id="toc-core-classes" class="nav-link active" data-scroll-target="#core-classes"><span class="header-section-number">7.1</span> Core Classes</a>
+  <ul class="collapse">
+  <li><a href="#ainotebook" id="toc-ainotebook" class="nav-link" data-scroll-target="#ainotebook"><span class="header-section-number">7.1.1</span> AINotebook</a></li>
+  </ul></li>
+  <li><a href="#configuration" id="toc-configuration" class="nav-link" data-scroll-target="#configuration"><span class="header-section-number">7.2</span> Configuration</a>
+  <ul class="collapse">
+  <li><a href="#settings.json" id="toc-settings.json" class="nav-link" data-scroll-target="#settings.json"><span class="header-section-number">7.2.1</span> settings.json</a></li>
+  <li><a href="#template-format" id="toc-template-format" class="nav-link" data-scroll-target="#template-format"><span class="header-section-number">7.2.2</span> Template Format</a></li>
+  </ul></li>
+  <li><a href="#command-line-interface" id="toc-command-line-interface" class="nav-link" data-scroll-target="#command-line-interface"><span class="header-section-number">7.3</span> Command Line Interface</a>
+  <ul class="collapse">
+  <li><a href="#basic-commands" id="toc-basic-commands" class="nav-link" data-scroll-target="#basic-commands"><span class="header-section-number">7.3.1</span> Basic Commands</a></li>
+  <li><a href="#options" id="toc-options" class="nav-link" data-scroll-target="#options"><span class="header-section-number">7.3.2</span> Options</a></li>
+  </ul></li>
+  <li><a href="#output-formats" id="toc-output-formats" class="nav-link" data-scroll-target="#output-formats"><span class="header-section-number">7.4</span> Output Formats</a>
+  <ul class="collapse">
+  <li><a href="#json-response" id="toc-json-response" class="nav-link" data-scroll-target="#json-response"><span class="header-section-number">7.4.1</span> JSON Response</a></li>
+  <li><a href="#visualization-options" id="toc-visualization-options" class="nav-link" data-scroll-target="#visualization-options"><span class="header-section-number">7.4.2</span> Visualization Options</a></li>
+  </ul></li>
+  <li><a href="#configuration-1" id="toc-configuration-1" class="nav-link" data-scroll-target="#configuration-1"><span class="header-section-number">7.5</span> Configuration</a>
+  <ul class="collapse">
+  <li><a href="#settings.json-1" id="toc-settings.json-1" class="nav-link" data-scroll-target="#settings.json-1"><span class="header-section-number">7.5.1</span> settings.json</a></li>
+  <li><a href="#template-format-1" id="toc-template-format-1" class="nav-link" data-scroll-target="#template-format-1"><span class="header-section-number">7.5.2</span> Template Format</a></li>
+  </ul></li>
+  <li><a href="#command-line-interface-1" id="toc-command-line-interface-1" class="nav-link" data-scroll-target="#command-line-interface-1"><span class="header-section-number">7.6</span> Command Line Interface</a>
+  <ul class="collapse">
+  <li><a href="#basic-commands-1" id="toc-basic-commands-1" class="nav-link" data-scroll-target="#basic-commands-1"><span class="header-section-number">7.6.1</span> Basic Commands</a></li>
+  <li><a href="#options-1" id="toc-options-1" class="nav-link" data-scroll-target="#options-1"><span class="header-section-number">7.6.2</span> Options</a></li>
+  </ul></li>
+  <li><a href="#output-formats-1" id="toc-output-formats-1" class="nav-link" data-scroll-target="#output-formats-1"><span class="header-section-number">7.7</span> Output Formats</a>
+  <ul class="collapse">
+  <li><a href="#json-response-1" id="toc-json-response-1" class="nav-link" data-scroll-target="#json-response-1"><span class="header-section-number">7.7.1</span> JSON Response</a></li>
+  <li><a href="#visualization-options-1" id="toc-visualization-options-1" class="nav-link" data-scroll-target="#visualization-options-1"><span class="header-section-number">7.7.2</span> Visualization Options</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">API Reference</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="core-classes" class="level2" data-number="7.1">
+<h2 data-number="7.1" data-anchor-id="core-classes"><span class="header-section-number">7.1</span> Core Classes</h2>
+<section id="ainotebook" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" data-anchor-id="ainotebook"><span class="header-section-number">7.1.1</span> AINotebook</h3>
+<p>Main class for notebook processing.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> AINotebook:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, api_keys<span class="op">=</span><span class="va">None</span>, config_file<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Initialize AI Notebook.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">        Args:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">            api_keys (dict): API keys for providers</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">            config_file (str): Path to config file</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> process_file(<span class="va">self</span>, file_path, overwrite<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Process a notebook file.</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">        Args:</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">            file_path (str): Path to QMD file</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">            overwrite (bool): Force reprocessing</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> process_audio(<span class="va">self</span>, file_path, model<span class="op">=</span><span class="st">"whisper"</span>):</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Process an audio file.</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">        Args:</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">            file_path (str): Path to audio file</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">            model (str): Model to use</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span></code></pre></div>
+</section>
+</section>
+<section id="configuration" class="level2" data-number="7.2">
+<h2 data-number="7.2" data-anchor-id="configuration"><span class="header-section-number">7.2</span> Configuration</h2>
+<section id="settings.json" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" data-anchor-id="settings.json"><span class="header-section-number">7.2.1</span> settings.json</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"models"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"claude-haiku"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"provider"</span><span class="fu">:</span> <span class="st">"anthropic"</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"claude-3-haiku"</span><span class="fu">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"max_tokens"</span><span class="fu">:</span> <span class="dv">4096</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"gemini-pro"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"provider"</span><span class="fu">:</span> <span class="st">"google"</span><span class="fu">,</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"gemini-pro"</span><span class="fu">,</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"max_tokens"</span><span class="fu">:</span> <span class="dv">8192</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"templates"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"path"</span><span class="fu">:</span> <span class="st">"templates"</span><span class="fu">,</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"default_vars"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"STYLE"</span><span class="fu">:</span> <span class="st">"academic"</span><span class="fu">,</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"LENGTH"</span><span class="fu">:</span> <span class="st">"medium"</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</section>
+<section id="template-format" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" data-anchor-id="template-format"><span class="header-section-number">7.2.2</span> Template Format</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> template_name</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> Template description</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">variables</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">VAR1</span><span class="kw">:</span><span class="at"> string</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">VAR2</span><span class="kw">:</span><span class="at"> string</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">prompt</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  Your prompt here with</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  {{VAR1}} and {{VAR2}}</span></code></pre></div>
+</section>
+</section>
+<section id="command-line-interface" class="level2" data-number="7.3">
+<h2 data-number="7.3" data-anchor-id="command-line-interface"><span class="header-section-number">7.3</span> Command Line Interface</h2>
+<section id="basic-commands" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" data-anchor-id="basic-commands"><span class="header-section-number">7.3.1</span> Basic Commands</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Process a notebook</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> process notebook.qmd</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Process audio</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> audio recording.mp3 <span class="at">--model</span> whisper</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate visualization</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> visualize results.json</span></code></pre></div>
+</section>
+<section id="options" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" data-anchor-id="options"><span class="header-section-number">7.3.2</span> Options</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Force reprocessing</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> process <span class="at">--overwrite</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify config</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> process <span class="at">--config</span> custom_config.json</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set model</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> process <span class="at">--model</span> claude-haiku</span></code></pre></div>
+</section>
+</section>
+<section id="output-formats" class="level2" data-number="7.4">
+<h2 data-number="7.4" data-anchor-id="output-formats"><span class="header-section-number">7.4</span> Output Formats</h2>
+<section id="json-response" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" data-anchor-id="json-response"><span class="header-section-number">7.4.1</span> JSON Response</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"notebook.qmd"</span><span class="fu">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"claude-haiku"</span><span class="fu">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"timestamp"</span><span class="fu">:</span> <span class="st">"2024-03-15T10:30:00Z"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"blocks"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"block1"</span><span class="fu">,</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"analysis"</span><span class="fu">,</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"claude-haiku"</span><span class="fu">,</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"prompt"</span><span class="fu">:</span> <span class="st">"..."</span><span class="fu">,</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"response"</span><span class="fu">:</span> <span class="st">"..."</span><span class="fu">,</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"tokens"</span><span class="fu">:</span> <span class="dv">1234</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</section>
+<section id="visualization-options" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" data-anchor-id="visualization-options"><span class="header-section-number">7.4.2</span> Visualization Options</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Available metrics</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>metrics <span class="op">=</span> [</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"response_time"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"token_usage"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"model_distribution"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cost_analysis"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"template_usage"</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Chart types</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>chart_types <span class="op">=</span> [</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bar"</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"line"</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"scatter"</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"heatmap"</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"network"</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>] </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>:::{<span class="co">#quarto-navigation-envelope .hidden}</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>[AI Notebook Documentation]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl"</span>}</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>[AI Notebook Documentation]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXItdGl0bGU="</span>}</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-number'</span><span class="op">&gt;</span><span class="dv">6</span><span class="op">&lt;/</span>span<span class="op">&gt;</span>&nbsp; <span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-title'</span><span class="op">&gt;</span>Usage Examples<span class="op">&lt;/</span>span<span class="op">&gt;</span>]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1wcmV2"</span>}</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-number'</span><span class="op">&gt;</span><span class="dv">1</span><span class="op">&lt;/</span>span<span class="op">&gt;</span>&nbsp; <span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-title'</span><span class="op">&gt;</span>AI<span class="op">-</span>Ensemble<span class="op">&lt;/</span>span<span class="op">&gt;</span>]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1zaWRlYmFyOi8wMC1lbnNlbWJsZS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLUVuc2VtYmxlPC9zcGFuPg=="</span>}</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-number'</span><span class="op">&gt;</span><span class="dv">2</span><span class="op">&lt;/</span>span<span class="op">&gt;</span>&nbsp; <span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-title'</span><span class="op">&gt;</span>Introduction<span class="op">&lt;/</span>span<span class="op">&gt;</span>]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4yPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkludHJvZHVjdGlvbjwvc3Bhbj4="</span>}</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-number'</span><span class="op">&gt;</span><span class="dv">3</span><span class="op">&lt;/</span>span<span class="op">&gt;</span>&nbsp; <span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-title'</span><span class="op">&gt;</span>AI Notebook Structure<span class="op">&lt;/</span>span<span class="op">&gt;</span>]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1zaWRlYmFyOi8wMS1zdHJ1Y3R1cmUuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BSS1Ob3RlYm9vay1TdHJ1Y3R1cmU8L3NwYW4+"</span>}</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-number'</span><span class="op">&gt;</span><span class="dv">4</span><span class="op">&lt;/</span>span<span class="op">&gt;</span>&nbsp; <span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-title'</span><span class="op">&gt;</span>AI Models<span class="op">&lt;/</span>span<span class="op">&gt;</span>]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1zaWRlYmFyOi8wMi1tb2RlbHMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+NDwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BSS1Nb2RlbHM8L3NwYW4+"</span>}</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-number'</span><span class="op">&gt;</span><span class="dv">5</span><span class="op">&lt;/</span>span<span class="op">&gt;</span>&nbsp; <span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-title'</span><span class="op">&gt;</span>AI Notebook Features<span class="op">&lt;/</span>span<span class="op">&gt;</span>]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1zaWRlYmFyOi8wMy1mZWF0dXJlcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz41PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLU5vdGVib29rLUZlYXR1cmVzPC9zcGFuPg=="</span>}</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-number'</span><span class="op">&gt;</span><span class="dv">6</span><span class="op">&lt;/</span>span<span class="op">&gt;</span>&nbsp; <span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-title'</span><span class="op">&gt;</span>Usage Examples<span class="op">&lt;/</span>span<span class="op">&gt;</span>]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1zaWRlYmFyOi9leGFtcGxlcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz42PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlVzYWdlLUV4YW1wbGVzPC9zcGFuPg=="</span>}</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-number'</span><span class="op">&gt;</span><span class="dv">7</span><span class="op">&lt;/</span>span<span class="op">&gt;</span>&nbsp; <span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-title'</span><span class="op">&gt;</span>API Reference<span class="op">&lt;/</span>span<span class="op">&gt;</span>]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1zaWRlYmFyOi9yZWZlcmVuY2UuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Nzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BUEktUmVmZXJlbmNlPC9zcGFuPg=="</span>}</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-number'</span><span class="op">&gt;</span><span class="dv">7</span><span class="op">&lt;/</span>span<span class="op">&gt;</span>&nbsp; <span class="op">&lt;</span>span <span class="kw">class</span><span class="op">=</span><span class="st">'chapter-title'</span><span class="op">&gt;</span>API Reference<span class="op">&lt;/</span>span<span class="op">&gt;</span>]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Nzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BUEktUmVmZXJlbmNlPC9zcGFuPg=="</span>}</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>:::{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"Zm9vdGVyLWNlbnRlcg=="</span>}</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>Copyright <span class="dv">2025</span>, Gerd Graßhoff</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>:::{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"bWFyZ2luLWhlYWRlcg=="</span>}</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>:::{.margin<span class="op">-</span>header<span class="op">-</span>item}</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>:::{<span class="co">#quarto-meta-markdown .hidden}</span></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">7</span>]{.chapter<span class="op">-</span>number}&nbsp; [API Reference]{.chapter<span class="op">-</span>title} – AI Notebook Documentation]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLW1ldGF0aXRsZQ=="</span>}</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">7</span>]{.chapter<span class="op">-</span>number}&nbsp; [API Reference]{.chapter<span class="op">-</span>title} – AI Notebook Documentation]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU="</span>}</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">7</span>]{.chapter<span class="op">-</span>number}&nbsp; [API Reference]{.chapter<span class="op">-</span>title} – AI Notebook Documentation]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLW9nY2FyZHRpdGxl"</span>}</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>[AI Notebook Documentation]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLW1ldGFzaXRlbmFtZQ=="</span>}</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>[]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="</span>}</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>[]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLW9nY2FyZGRkZXNj"</span>}</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!--</span> <span class="op">--&gt;</span></span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>::: {.quarto<span class="op">-</span>embedded<span class="op">-</span>source<span class="op">-</span>code}</span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>```````````````````{.markdown shortcodes<span class="op">=</span><span class="st">"false"</span>}</span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a><span class="co"># API Reference</span></span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a><span class="co">## Core Classes</span></span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a><span class="co">### AINotebook</span></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>Main <span class="kw">class</span> <span class="cf">for</span> notebook processing.</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>```python</span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> AINotebook:</span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, api_keys<span class="op">=</span><span class="va">None</span>, config_file<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>        <span class="st">"""Initialize AI Notebook.</span></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a><span class="st">        </span></span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a><span class="st">        Args:</span></span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a><span class="st">            api_keys (dict): API keys for providers</span></span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a><span class="st">            config_file (str): Path to config file</span></span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a><span class="st">        """</span></span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> process_file(<span class="va">self</span>, file_path, overwrite<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>        <span class="st">"""Process a notebook file.</span></span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a><span class="st">        </span></span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a><span class="st">        Args:</span></span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a><span class="st">            file_path (str): Path to QMD file</span></span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a><span class="st">            overwrite (bool): Force reprocessing</span></span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a><span class="st">        """</span></span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> process_audio(<span class="va">self</span>, file_path, model<span class="op">=</span><span class="st">"whisper"</span>):</span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>        <span class="st">"""Process an audio file.</span></span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a><span class="st">        </span></span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a><span class="st">        Args:</span></span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a><span class="st">            file_path (str): Path to audio file</span></span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a><span class="st">            model (str): Model to use</span></span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a><span class="st">        """</span></span></code></pre></div>
+</section>
+</section>
+<section id="configuration-1" class="level2" data-number="7.5">
+<h2 data-number="7.5" data-anchor-id="configuration-1"><span class="header-section-number">7.5</span> Configuration</h2>
+<section id="settings.json-1" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" data-anchor-id="settings.json-1"><span class="header-section-number">7.5.1</span> settings.json</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"models"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"claude-haiku"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"provider"</span><span class="fu">:</span> <span class="st">"anthropic"</span><span class="fu">,</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"claude-3-haiku"</span><span class="fu">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"max_tokens"</span><span class="fu">:</span> <span class="dv">4096</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"gemini-pro"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"provider"</span><span class="fu">:</span> <span class="st">"google"</span><span class="fu">,</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"gemini-pro"</span><span class="fu">,</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"max_tokens"</span><span class="fu">:</span> <span class="dv">8192</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"templates"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"path"</span><span class="fu">:</span> <span class="st">"templates"</span><span class="fu">,</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"default_vars"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"STYLE"</span><span class="fu">:</span> <span class="st">"academic"</span><span class="fu">,</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"LENGTH"</span><span class="fu">:</span> <span class="st">"medium"</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</section>
+<section id="template-format-1" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" data-anchor-id="template-format-1"><span class="header-section-number">7.5.2</span> Template Format</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> template_name</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> Template description</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">variables</span><span class="kw">:</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">VAR1</span><span class="kw">:</span><span class="at"> string</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">VAR2</span><span class="kw">:</span><span class="at"> string</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">prompt</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  Your prompt here with</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  {{VAR1}} and {{VAR2}}</span></code></pre></div>
+</section>
+</section>
+<section id="command-line-interface-1" class="level2" data-number="7.6">
+<h2 data-number="7.6" data-anchor-id="command-line-interface-1"><span class="header-section-number">7.6</span> Command Line Interface</h2>
+<section id="basic-commands-1" class="level3" data-number="7.6.1">
+<h3 data-number="7.6.1" data-anchor-id="basic-commands-1"><span class="header-section-number">7.6.1</span> Basic Commands</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Process a notebook</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> process notebook.qmd</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Process audio</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> audio recording.mp3 <span class="at">--model</span> whisper</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate visualization</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> visualize results.json</span></code></pre></div>
+</section>
+<section id="options-1" class="level3" data-number="7.6.2">
+<h3 data-number="7.6.2" data-anchor-id="options-1"><span class="header-section-number">7.6.2</span> Options</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Force reprocessing</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> process <span class="at">--overwrite</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify config</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> process <span class="at">--config</span> custom_config.json</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set model</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ex">ainotebook</span> process <span class="at">--model</span> claude-haiku</span></code></pre></div>
+</section>
+</section>
+<section id="output-formats-1" class="level2" data-number="7.7">
+<h2 data-number="7.7" data-anchor-id="output-formats-1"><span class="header-section-number">7.7</span> Output Formats</h2>
+<section id="json-response-1" class="level3" data-number="7.7.1">
+<h3 data-number="7.7.1" data-anchor-id="json-response-1"><span class="header-section-number">7.7.1</span> JSON Response</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"notebook.qmd"</span><span class="fu">,</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"claude-haiku"</span><span class="fu">,</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"timestamp"</span><span class="fu">:</span> <span class="st">"2024-03-15T10:30:00Z"</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"blocks"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"block1"</span><span class="fu">,</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"analysis"</span><span class="fu">,</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"claude-haiku"</span><span class="fu">,</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"prompt"</span><span class="fu">:</span> <span class="st">"..."</span><span class="fu">,</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"response"</span><span class="fu">:</span> <span class="st">"..."</span><span class="fu">,</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"tokens"</span><span class="fu">:</span> <span class="dv">1234</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</section>
+<section id="visualization-options-1" class="level3" data-number="7.7.2">
+<h3 data-number="7.7.2" data-anchor-id="visualization-options-1"><span class="header-section-number">7.7.2</span> Visualization Options</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Available metrics</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>metrics <span class="op">=</span> [</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"response_time"</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"token_usage"</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"model_distribution"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cost_analysis"</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"template_usage"</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Chart types</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>chart_types <span class="op">=</span> [</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bar"</span>,</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"line"</span>,</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"scatter"</span>,</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"heatmap"</span>,</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"network"</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>] </span></code></pre></div>
+<p>:::</p>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+});
+</script>
+<nav class="page-navigation column-page-right">
+  <div class="nav-page nav-page-previous">
+      <a href="./examples.html" class="pagination-link" aria-label="Usage Examples">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Usage Examples</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <div class="footer-contents">Copyright 2025, Gerd Graßhoff</div>  
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

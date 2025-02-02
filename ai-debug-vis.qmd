@@ -1,0 +1,180 @@
+---
+title: AI-Notebooks
+author: Gerd Graßhoff
+date: "2025-01-15"
+format:
+  html:
+    theme: sandstone
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    highlight-style: github
+    fig-width: 8
+    fig-height: 6
+    fig-format: png
+    fig-dpi: 300
+    embed-resources: true
+---
+
+# AI-Notebooks
+
+## Blocks
+
+
+
+::: {.callout-note title="Input #1"}
+```ai
+<!--
+---
+model: gemini-2.0-flash-thinking-exp-01-21
+preamble: Antworte ohne Einleitung oder Präambel. Behalte die Struktur des Textes bei. \n 
+template:
+  - file: document.j2
+    variables:
+      DESCRIPTION: Manger1789.txt
+---
+-->
+Sorgfältig den Deutschen Text wiedergeben, verbessere nur die Fehler oder alte Rechtschreibung. Korrigiere Trennungen. Breche lange Zeilen auf 70 Zeichen auf.
+```
+:::
+::: {.callout-tip collapse="true" title="Response (Model: gemini-2.0-flash-thinking-exp-01-21, Time: 47.5s)"}
+## Beginn der Wasserwerksanlagen in Sans-Souci
+
+Im selben Jahr begann die Errichtung der Fontänen- und Grottenanlagen, respektive die Konzeption der Wasserwerke in Sans-Souci. Diese Arbeiten wurden von diversen Künstlern und Laien ausgeführt, deren Motivationen von Furcht und Hoffnung bis hin zu einer, wie anzunehmen ist, übersteigerten Selbstüberschätzung reichten. Die Bauarbeiten dauerten bis 1756 an, bevor sie schließlich eingestellt wurden. Eine detaillierte Schilderung der jährlichen Fortschritte würde den Erzählfluss unnötig unterbrechen und die Verständlichkeit beeinträchtigen. Daher sollen die acht aufeinanderfolgenden Jahre zusammenfassend betrachtet werden, wobei die wesentlichen Errungenschaften jedes einzelnen Jahres gesondert hervorgehoben werden.
+
+### Baumanns anfängliche Planungen und die Rekrutierung Heinkes
+
+Baumann wurde mit der Aufgabe betraut, Pläne und Kostenvoranschläge für das Projekt einzureichen. Es ist jedoch allgemein bekannt, dass nicht jeder Bau- und Werkmeister in allen Bereichen des Bauwesens, insbesondere im komplexen Maschinenbau, über umfassende Expertise verfügt. Folglich ist bei neuartigen Aufträgen, die außerhalb des bisherigen Erfahrungsschatzes liegen, die Konsultation externer Fachkräfte unerlässlich. Baumann, der ein vergleichbares Vertrauen in seine Landsleute hegte, wie König Friedrich Wilhelm I. in die Holländer im Allgemeinen, beauftragte einen ihm bekannten Wasserkunstexperten aus Amsterdam. Dieser traf bald darauf ein, stellte sich als Heinke vor und war ursprünglich Gärtner. Vermutlich hatte er in seiner Heimat bereits kleinere Wasseranlagen in den Gärten wohlhabender Privatleute realisiert, sich jedoch kaum die Ehre vorstellen können, [**page break p=92**] im Jahr 1748 eine derart umfangreiche hydraulische Anlage für König Friedrich II. von Preußen zu konzipieren.
+
+### Heinkes gescheiterter Vorschlag und alternative Konzepte
+
+Vor seiner Abreise nach Potsdam besorgte sich Heinke einen Kupferstich aus London aus dem Jahr 1725 von Sutton & Nicholls. Dieser Stich illustrierte, wie mittels Feuer und dem Dampf aus kochendem Wasser, weiteres Wasser gehoben und in die Höhe befördert werden kann. Diesen Kupferstich ließ er vor Ort sorgfältig abzeichnen und übergab ihn, zusammen mit einer eigentümlich formulierten deutschen Übersetzung der englischen Erläuterung, als seinen Vorschlag direkt dem König.
+
+Ob die Komplexität dieser Maschine, der sich bereits abzeichnende Holzmangel für die Feuerung oder andere, mir unbekannte Gründe ausschlaggebend waren, ist unklar, jedoch fand dieses Projekt keine Zustimmung. Dasselbe Schicksal ereilte einen weiteren, meines Erachtens nach vorteilhafteren Vorschlag. Dieser sah vor, aus dem oberen Teil der Havel, insbesondere dem Jungfernsee, einen Kanal am Höneberg vorbei bis zum unteren Teil des Flusses, gegenüber von Werder, zu graben. In diesem Kanal sollten ein oder mehrere Wasserräder installiert werden, um das Wasser in den Sammelkasten auf dem genannten Höneberg zu befördern. Die erheblichen Kosten für den Kanalaushub, die beidseitige Uferbefestigung mit Steinen, die zahlreichen Brücken, die über den Kanal hätten errichtet werden müssen, die Entschädigung der Grundstückseigentümer für das durchschnittene Terrain sowie die Aufwendungen für die regelmäßige Räumung des Kanals aufgrund von Versandung, führten zu Einwänden und [**page break p=93**] Bedenken. Hinzu kam das geringe Gefälle, das dieser Kanal möglicherweise aufgewiesen hätte, da die Havel sehr flach fließt und daher, insbesondere in den Sommermonaten, möglicherweise nicht genügend Wasser für den Betrieb einer Maschine geliefert hätte. Bei späteren, präziseren Nivellierungen stellte sich zwar heraus, dass das geringe Gefälle kein Hindernis dargestellt hätte, sofern das Projekt fachgerecht angegangen worden wäre. Jedoch war es zu diesem Zeitpunkt bereits zu spät und der Vorschlag wurde verworfen. Andere, weniger praktikable Vorschläge zur Einrichtung dieser Wasserwerke, an denen es nicht mangelte, sollen hier nicht weiter erörtert werden. Es sei lediglich angemerkt, dass schließlich Baumann selbst wieder die Initiative ergreifen und einen eigenen Plan entwickeln musste.
+
+### Die Entscheidung für eine Windmühle
+
+Angesichts der in Holland durch bloße Windmühlen erzielten bemerkenswerten Leistungen, wurde auch hier eine Windmühle als Lösung empfohlen. Diese sollte an der südlichen Grenze des Rehgartens errichtet werden und das Wasser in den dafür vorgesehenen Sammelkasten auf dem sogenannten Höneberg befördern. Dieser Vorschlag fand die Zustimmung des Königs.
+
+### Umfang und Konzeption der Gesamtanlage
+
+Der Plan für die Gesamtanlage war von beachtlichem Umfang. Neben der Errichtung der Windmühle mit all ihren Räderwerken, Stiefeln, Röhren, Ventilen und zugehörigen Elementen, war zunächst der Aushub eines Kanals aus der Havel erforderlich. Dieser Kanal sollte 325 Ruthen lang und 3 Ruthen breit sein, um eine kontinuierliche und ausreichende Wasserzufuhr zu den Brunnen der Mühle zu gewährleisten. Von dort aus mussten Steigeröhren von nahezu gleicher Länge bis zum [**page break p=94**] Höneberg verlegt werden, der sich 150 Fuß über dem Niveau der Havel erhob. Das Gelände war dabei sehr uneben, sodass die Röhren teils tief in die Erde, teils auf erhöhten Dämmen verlegt werden mussten. Auf der Anhöhe war ein geräumiger, wasserdichter Kessel oder Sammelkasten erforderlich. Von diesem mussten die Abfallröhren mit ähnlichen Schwierigkeiten wie die Steigeröhren zu den verschiedenen Bereichen des Gartens geführt werden, wo das Wasser seine Wirkung entfalten sollte.
+
+Gemäß dem königlichen Beschluss sollte der Garten nicht nur ein großes Hauptwasserbecken (Bassin) mit einer 100 Fuß hohen Fontäne sowie vier Nebenbecken mit niedrigeren Fontänen erhalten, sondern auch eine Grotte mit Verzierungen wie Figuren, Delphinen und Kaskaden etc. Ebenso sollten alle Figuren der Kolonnade im Rehgarten mit ausreichend Wasser versorgt werden, was insgesamt 62 verschiedene Wasserspiele umfasste. Die Umsetzung dieser Pläne soll im Folgenden detailliert beschrieben werden.
+
+## Windmühlenbau
+
+### Fortschritte im Windmühlenbau im Jahr 1748
+
+Zunächst wurde der Bau der Windmühle selbst in Angriff genommen. Sowohl das äußere Erscheinungsbild als auch der Rohbau des Inneren wurden größtenteils noch in diesem Jahr fertiggestellt. Bereits im November war das Dach gedeckt und gestrichen. Der in Potsdam ansässige holländische Zimmermeister Adrian den Duden war für die Errichtung verantwortlich. Kurze Zeit später wurde zusätzlich ein Müller namens Bährend eingestellt. Der aus Holland angeworbene Gärtner Heinze sollte das mechanische Kunstwerk im Inneren der Mühle betreuen. Ihm wurde der Titel Fontainier oder Grottier verliehen und [**page break p=95**] aus der Baukasse ein Mietzins entrichtet, bis seine eigentliche neue Wohnung fertiggestellt war.
+
+### Innere Mechanik der Windmühle
+
+Die Mühle ähnelte äußerlich in ihrer Bauweise vollständig den üblichen holländischen Windmühlen. Die obere Kuppel mit der liegenden Welle und den Windflügeln konnte mittels einer Winde auf der Galerie und daran befestigten Scheren gedreht und dem Wind angepasst werden. Auch die innere Einrichtung entsprach im Wesentlichen dem Aufbau solcher Mühlen. Sie verfügte über das große Kammrad und die stehende Welle. Letztere war jedoch nach unten hin, anstelle der üblichen Mahlgänge, mit einer langen liegenden Welle verbunden. Diese trieb über eiserne, senkrechte und verzahnte Elemente sechs Kolbenstangen in ebenso vielen metallenen Stiefeln an. Dadurch wurde das Wasser aus den beiden Brunnen, in denen sie standen, zunächst in metallene Knie und Röhren und anschließend in die Steigeröhren in Richtung Höneberg gepresst. Bei Windstille konnte die Bewegung der Kolbenstangen auch durch ein speziell installiertes Werk von Pferden übernommen werden.
+
+### Fertigstellung des Kanals und Entschädigung der Grundstückseigentümer
+
+Der Kanal aus der Havel sowie seine hölzerne Verschalung auf beiden Seiten hinter eingeschlagenen Pfählen und die vier Brücken darüber, von denen zwei über Hauptstraßen, eine über eine Nebenstraße und eine schmalere ausschließlich für die Zugänglichkeit der nunmehr so genannten Kunstmühle führten, wurden bereits Ende November fertiggestellt. Der durch den Kanal beanspruchte Platz auf minderwertigem Sandacker und einigen Wiesenstücken wurde [**page break p=96**] den Eigentümern mit 560 Talern entschädigt.
+
+## Rohre aus Stäben und deren Scheitern
+
+### Konstruktion und Montage der Rohre aus Stäben
+
+Bereits vor dem Ende des Herbstes wurde begonnen, aus den angelieferten 800 Stück kiesenen, 24 Fuß langen Sägeblöcken Bohlen zu schneiden und diese zu stapeln, um sie nach einer gewissen Trocknungszeit zu Röhrenstäben weiterzuverarbeiten. Die Rohre für dieses Wasserwerk sollten nämlich aus mehreren Segmenten, Dauben oder Stäben, ähnlich wie Fässer, gefertigt werden. Diese sollten jedoch mit Eisenbändern gebunden und durch eiserne Buchsen verbunden werden, um das Zerspringen der Rohre im Vergleich zu solchen aus massivem Holz, bei denen der Kern ausgebohrt und lediglich der Splint verbleibt, zu minimieren.
+
+### Probleme und Bruch der Rohre aus Stäben
+
+Sowohl in diesem Jahr als auch zu Beginn des folgenden Jahres wurden die Röhren zusammengesetzt. Der Innendurchmesser der für den Aufstieg bestimmten Rohre betrug sieben bis neun Zoll, während der Durchmesser der Fallrohre zwölf bis sechzehn Zoll aufwies. Für jedes 24 Fuß lange Rohr waren sieben eiserne Reifen oder Ringe vorgesehen. Manchmal waren jedoch ein oder zwei Ringe mehr erforderlich, wenn die Montage Schwierigkeiten bereitete. Jedes Rohr erhielt an seinem Anfang und Ende am inneren Durchmesser einen Ring oder eine Buchse, die entweder das folgende Rohr halb umschloss oder selbst in das nächste Rohr passte.
+
+Der mit diesen Rohren unternommene Versuch entsprach nicht den Erwartungen. Sie platzten größtenteils, in der Regel, sobald das Wasser etwa die halbe Strecke des Aufstiegs zurückgelegt hatte. Man musste also [**page break p=97**] dieses Vorhaben aufgeben und sich stattdessen für Rohre entscheiden, die aus massivem Holz hohl ausgebohrt und von außen mit eisernen Schraubringen zusätzlich gegen das Zerspringen gesichert wurden. Von März bis Dezember 1749 wurden etwa 8.000 Fuß dieser Rohre ausgebohrt und verlegt, teils mit fünf, teils mit vier, und einige hundert Fuß mit einem inneren Durchmesser von drei Zoll. Bei den Steigrohren wurden gleichzeitig fünf große Windkessel installiert. Diese Windkessel sind bekannt dafür, den Wasserdruck zu regulieren, sodass er konstant bleibt. Sie wogen insgesamt 294 Zentner Kupfer.
+
+### Verlegung von Rohren im Garten und Bau des Wasserbehälters
+
+Zur gleichen Zeit wurden auch die Rohre im Garten zu den verschiedenen Becken und der Grotte verlegt. Dies betraf sowohl die Seite, an der die Fallrohre vom Höneberg das Wasser zuführen sollten, als auch die Rohre, die für den Abfluss des überschüssigen Wassers aus den Becken in den kleinen Kanal am Garten bestimmt waren.
+
+Auf dem Höneberg selbst wurde im Juli mit dem Aushub für den großen runden Kessel als Wasserbehälter begonnen und die Erde abtransportiert. Er wurde mit einem Durchmesser von 120 Fuß und einer Tiefe von 12 Fuß angelegt, sodass er ein Fassungsvermögen von 155.520 Kubikfuß oder 648 Tonnen Wasser erreichte. Sowohl die Einfassungsmauern als auch der Boden erhielten neben der üblichen Mauerstärke eine dreifache Schicht Ziegelklinker, die mit Zement vermauert wurden. Die Mauern wurden über ihre gesamte Länge, der Boden hochkant verkleidet. In gleicher Weise wurde auch das Mauerwerk zu
+
+## Gebohrte Röhren und Wasserbehälter auf dem Höneberg
+
+[**page break p=98**] den Becken im Garten und anderen wasserdicht zu machenden Anlagen ausgeführt. Der Zement hierfür stammte teils aus Holland, wie bereits bei den Wasserbauten im und am Schlossgarten in der Stadt, teils aus dem Mansfeldischen. Letzterer war zwar kostengünstiger, aber qualitativ minderwertiger als der holländische Zement, vermutlich aufgrund eines höheren Anteils an Fremdstoffen.
+
+## Ruinenanlage auf dem Höneberg
+
+Die hinteren Ruinenmauern auf dem Höneberg, die an ein antikes Amphitheater erinnern sollten, sowie der kleine runde Tempel mit 16 dorischen Säulen und einem Durchmesser von 324 Fuß wurden ebenfalls begonnen und fertiggestellt. Die beiden intakten und eine zerbrochene größere antike ionische Säule mit einem Durchmesser von viereinhalb Fuß und ihrem Gebälk, die den Vordergrund bildeten, blieben bis zuletzt unvollendet.
+
+Der erste Entwurf für diese pittoreske Ruinenanlage stammte von Knobelsdorff. Er wurde jedoch später auf Befehl von Bellavilla verändert, obwohl die Ausführung den ursprünglichen Kostenvoranschlag um 6000 Taler überstieg.
+
+## Bassins in Sans-Souci und deren Verzierung
+
+Der Bildhauer Adam der Jüngere fertigte Modelle für die Figuren in den Becken und für einige, die um die Becken in den Gartenbereichen aufgestellt werden sollten. Diese wurden anschließend größtenteils von Giese aus Blei gegossen, beispielsweise der Triumph der Galathee, vier Figurengruppen (Thetis, Andromeda, Zentaur, der Deianira entführt, und Zentaur mit Europa). Nach Modellen Adams fertigte Ebenhech vier [**page break p=99**] bleierne Figurengruppen in sechs Fuß Proportion an. Giese goss darüber hinaus die metallenen Zylinder oder Stiefel für die Mühle sowie verschiedene Bleiarbeiten, da er im Gießen sehr erfahren war.
+
+## Erneutes Scheitern der Röhren und königliche Reaktion
+
+Die hölzernen, gebohrten Röhren mit den eisernen Schraubringen waren nun schließlich verlegt, erlitten jedoch ebenfalls bald dasselbe Schicksal wie die zuvor aus verschiedenen Stäben zusammengesetzten Rohre. Sie konnten dem Wasserdruck nicht standhalten und platzten. Dem König musste daher mitgeteilt werden, dass es keine andere Möglichkeit gäbe, das Wasser in den Sammelkasten zu befördern, als durch die Verwendung von qualitativ hochwertigen, gegossenen eisernen oder bleiernen Rohren. Für diese wurden entsprechende Lieferanten aus Kassel und dem Harz vorgeschlagen.
+
+Es war unvermeidlich, dass der König über die durch die beiden Arten hölzerner Rohre vergeudeten, gleichsam verschwendeten Summen, sehr verärgert war. Er forderte zu Recht, dass diejenigen, die Vorschläge einreichten, sich zuvor durch praktische Versuche von deren Wirksamkeit überzeugen müssten. Seinen berechtigten Unmut äußerte er jedoch nicht in strenger Form. Stattdessen ließ er, nachdem er erneut Gelder für eiserne Rohre bewilligt hatte, ein Paar Esel in Lebensgröße mit Ölfarbe auf Leinwand malen, mit Rahmen versehen und mit der Unterschrift versehen:
+
+"Hollaandſe Fontaenen - Maacker."
+
+Diese sehr naturgetreuen und gelungenen Darstellungen der Tiere sollten mit Wasserfarbe, die eine andere Darstellung zeigte, übermalt und an einigen [**page break p=100**] bestimmten Häusern als Schilder angebracht werden, sodass nach dem Abspülen der Wasserfarbe durch den Regen die eigentliche Malerei zum Vorschein kommen würde. Dies wurde jedoch durch zahlreiche Fürsprachen verhindert.
+
+## Eiserne und bleierne Röhren und Personalwechsel
+
+### Beschaffung und Verlegung eiserner und bleierner Röhren
+
+Die eisernen Rohre wurden daraufhin teils mit vier, teils mit neun Zoll lichten Durchmesser bestellt. Bis gegen Ende des Jahres 1752 trafen bleierne Rohre mit geringerem Innendurchmesser aus Holland und dem Harz im Wert von zehn bis zwölftausend Talern ein. Diese waren hauptsächlich für die Marmorgrotte im Garten und die Kolonnade im Rehgarten vorgesehen. Der bisherige Fontainier Heinke interpretierte die entworfenen Schilder für holländische Fontänenmacher möglicherweise als ungünstiges Omen. Er bat um seinen Abschied, der ihm jedoch durch seinen Tod ohne weiteres gewährt wurde. Er starb vermutlich aus Gram.
+
+### Neue Fontainiere: Osten und George
+
+Die bleiernen Rohre wurden von einem neuen Fontainier namens Osten oder van Osten verlegt. Nach einigen Berichten war er ursprünglich lediglich ein einfacher Brunnenmacher in Holland gewesen, hatte aber dort, in Hamburg und an anderen Orten bereits Rollen von höherem Rang gespielt. Daher fiel es ihm vermutlich leicht, sich hier als Fontainier oder Wasserkünstler zu präsentieren. Wirkliche, nützliche hydraulische Erfindungen und Ausführungen waren von ihm jedoch nicht zu erwarten. Er tat sich von Juli 1752 bis September 1753 hervor.
+
+Ihm folgte im Oktober 1753 für ein Jahr ein weiterer Fontainier oder Grottier, empfohlen vom damaligen Hessen-Cassel- [**page break p=101**] lischen Geheimdenrath Waiß, namens J. F. George. Dieser war eigentlich ein Rotgießer und als solcher durchaus brauchbar. Eigenständige Beiträge zu Wasserwerken oder zur Verbesserung bestehender Anlagen waren von ihm jedoch ebenfalls nicht zu erwarten.
+
+## Bau einer zweiten Windmühle und erster Wasserstrahl
+
+### Errichtung einer zweiten Windmühle
+
+Da man allgemein erkannte, dass die Wasserförderung in den Sammelkasten auf dem Höneberg mittels der einzigen errichteten Mühle sehr langsam voranging, selbst wenn die nunmehr verlegten eisernen und bleiernen Steigrohre dem Druck standhielten, wurde im Jahr 1754 eine zweite, baugleiche Mühle mit sechs metallenen Stiefeln in einer Senke zwischen Bornstedt und dem Höneberg errichtet. Diese sollte die untere Mühle unterstützen und aus ihren Brunnen ebenso viel Wasser wie jene heraufpumpen.
+
+### Erste Fontänendemonstration in Sans-Souci
+
+Inzwischen hatte die erste Mühle nach und nach so viel Wasser herauf "geleiert" (dieser Ausdruck scheint hier durchaus passend, da der Vorgang ausgesprochen langsam war). Zudem hatten reichliche Schneefälle und Regenfälle gute Dienste geleistet, sodass der Kessel beinahe halb gefüllt war. Dem König wurde daher mitgeteilt, dass nunmehr eine Probe mit dem Aufstieg eines Wasserstrahls von beträchtlicher Höhe im Becken vor der Grotte vorgeführt werden könne. Der König setzte den folgenden Tag fest, der zwar der Karfreitag des Jahres 1754 war, aber dennoch ein sehr stürmischer Tag. Trotz aller bisherigen Aufwendungen hatte er das Vergnügen, [**page break p=102**] diesen Strahl beinahe eine Stunde lang springen zu sehen. Dieser hätte möglicherweise eine Höhe von 50 Fuß erreicht, wenn der Wind es zugelassen hätte. Danach war das Wasser aufgebraucht und nach den bisherigen Erfahrungen war es wahrscheinlich, dass es ein weiteres Jahr dauern würde, bis wieder ausreichend Wasser für eine erneute Demonstration vorhanden wäre.
+
+## Neue Ära der Wasserwerke unter Pfannenstiehl
+
+### Johann Valentin Pfannenstiehl übernimmt die Leitung
+
+Doch so lange sollte es nicht dauern. Kurze Zeit später erschien derjenige, der all diesen Bemühungen um die Wasserwerke die entscheidende Wendung geben sollte, nachdem alle bisherigen Wasserkunstdirektoren und Wasserkünstler ihren gnädigen Abschied erhalten hatten. Es handelte sich um Johann Valentin Pfannenstiehl, einen ehemaligen Kupferschmied und Spritzenbauer, der nach eigener Aussage später Stücklieutenant Sr. Churfürstlichen Gnaden zu Mainz gewesen war. Er meldete sich mit seinen Kenntnissen direkt beim König und versprach mehr, als man zu hoffen wagte. Baumann hatte Potsdam verlassen und sich nach Berlin begeben müssen. Hildebrant und Bisring lehnten Aufträge dieser Art nach Möglichkeit ab. Fredersdorf erhielt daher den Befehl, von dem sich gemeldeten neuen Fontainier Pfannenstiehl Pläne und Kostenvoranschläge für die Ausführung anzufordern und das Weitere mit ihm zu vereinbaren. Pfannenstiehl legte diese vor und der Verfasser hatte die Ehre, sie einzusehen, obwohl sie eigentlich nur für den König und Fredersdorf bestimmt waren. Da der Plan bereits höchste Genehmigung gefunden hatte, wurde sein Gutachten nicht eingeholt und Pfannenstiehl musste schweigen.
+
+### Pfannenstiehls Plan und Kritik
+
+[**page break p=103**] Die gesamte geheimnisvolle Angelegenheit lief darauf hinaus, dass Pfannenstiehl die erste und einzige Kunstmühle in ihrer Arbeitsweise entlasten wollte, damit sie schneller arbeiten und mehr Wasser in den allgemeinen Sammelkasten befördern könne. Zu diesem Zweck wollte er seine neu zu verlegenden Steigrohre so anordnen, dass das Wasser von der Mühle aus in diesen Rohren von selbst bis über die Hälfte des Weges bergauf fließen und von dort aus mit einem Stoß in die Höhe befördert werden sollte. Inwieweit dies eine Entlastung oder vielmehr eine Erschwerung für die Maschine durch einen längeren Rohrbau und somit durch ein erhöhtes Gewicht des Wassers in den Rohren verursachen würde, überlasse ich jedem Hydraulik-Kundigen zur Beurteilung. Auf Verlangen des Königs untersuchte der erwähnte Hessen-Casselische Geheimderath Waiß Pfannenstiehls Projekt und fand verschiedene Einwände, die er ihm in einem Schreiben vom 1. Oktober 1755 mitteilte. Pfannenstiehl reagierte jedoch sehr verärgert, veröffentlichte eine gedruckte Rechtfertigung, in der er den Geheimdenrath Waiß scharf angriff, und blieb seinen Prinzipien treu.
+
+### Pfannenstiehls Autonomie und Arbeitsweise
+
+Er hatte sich ausgebeten, dass niemand ihm in seine Arbeit hineinreden oder seine Anordnungen kritisieren dürfe, geschweige denn andere. Vielmehr sollte er als alleiniger Verantwortlicher der Sache nach seinem Ermessen Werkmeister und Gehilfen einstellen und diesen allein Anweisungen geben dürfen. Die Kosten sollte er wöchentlich oder monatlich [**page break p=104**] aufzeichnen und diese ausschließlich durch Fredersdorf zur Zahlung anweisen lassen dürfen.
+
+### Beginn der Arbeiten und Verschönerung der Windmühle
+
+Seine Arbeiten begannen im November 1754 und er setzte eine Vielzahl von Aufsehern und Arbeitern in Bewegung, darunter Former, Gelb- und Zinngießer, Schmiede, Schlosser, Maurer, Tischler, Zimmerleute, Tagelöhner usw. Da der König zunächst keinen neuen Vorschuss bewilligte, wurde ein Teil der beschafften bleiernen Rohre zu Geld gemacht, um die neu begonnenen Arbeiten zu finanzieren. Nachdem der König Fredersdorf schließlich erneut Gelder für seinen Klienten Pfannenstiehl angewiesen hatte, begann dieser mit frischem Elan und zeigte bald, dass er der übernommenen Aufgabe gewachsen war. Seine erste Aufmerksamkeit galt der Eingangstür zur Kunstmühle. Diese passte, wie üblich und zweckmäßig, gut an die geneigte Fläche des Unterteils und schützte vor jeglichem Regenwetter, insbesondere da sie nach Osten ausgerichtet war. Er ließ sie mit einem Vorbau versehen, der mit toskanischen Säulen und einem vielfältig geschweiften Fronton geschmückt war. Im Inneren wurden breite Galerien, Tribünen oder Gänge angelegt, die ebenfalls mit toskanischen Säulen und starken eisernen Stangen teils gestützt, teils aufgehängt wurden. Zu diesen führten breite Eichentreppen mit geschweiften Stufen, wie man sie in Palästen oder Wohnungen wohlhabender Privatpersonen findet. All dies vermutlich, um Besucher im Voraus anzuregen, diese Kunstwerke, an denen er im Grunde nur wenige Veränderungen oder nach [**page break p=105**] seiner Art Verbesserungen vornahm, die größtenteils in neuen Schleif- und Polierarbeiten an den eisernen und metallenen Stücken bestanden, aus der Nähe zu betrachten.
+
+### Verlegung der Röhren und Bau eines hölzernen Gerüsts
+
+Anschließend begann er mit der Verlegung seines entworfenen neuen Rohrsystems. Dabei verwendete er, soweit es abwärts ging, die vorhandenen eisernen Rohre. Für die wieder aufwärts führenden Abschnitte verwendete er bleierne Rohre, die er direkt an Ort und Stelle, wo sie verlegt werden sollten, mittels einer Maschine nacheinander goss oder vielmehr zog, sodass sie nirgends verlötet werden mussten. Er führte Letzteres mit großer Geschicklichkeit aus, ebenso wie er überhaupt bei der Fertigung einzelner Stücke eine lobenswerte Präzision zeigte, auch wenn seine Kenntnisse des Gesamtzusammenhangs und der eigentlichen Aufgabenstellung etwas umfassender hätten sein können.
+
+Um die zweite Mühle und deren Unterstützung kümmerte er sich nicht. Stattdessen ließ er in der Senke unweit davon ein 21 Ruthen langes und 12 Fuß hohes Holzgerüst mit einem Mansard-Ziegeldach errichten und darauf die dorthin führenden Rohre in freier Luft verlegen, damit deren Verlauf nicht von der einmal projektierten, sich absenkenden und dem freien Abfluss des Wassers dienenden Linie abweichen möge. Dies wurde umso mehr bestaunt, als man üblicherweise solche Rohre vor dem Winterfrost so gut wie möglich mit Erde bedeckt. Dieses gesamte Gerüst verfaulte innerhalb von zehn Jahren und sein Holzwerk stürzte samt den Rohren nach und nach ein.
+
+## Pfannenstiehls Scheitern und Tod
+
+[**page break p=106**] Pfannenstiehl arbeitete nach seiner Art bis zum Ende des Jahres 1756 weiter. Nachdem er etwa 12.000 Taler ausgegeben hatte, die allesamt von Fredersdorf zur Auszahlung angewiesen worden waren, waren die Mittel erschöpft. Der Siebenjährige Krieg begann im August dieses Jahres und niemand dachte mehr an das Fontänenwerk oder an Pfannenstiehl. Dieser erzielte also keinen weiteren Verdienst, half sich einige Zeit durch den Verkauf übriggebliebenen Metalls, Bleis und Eisens und starb schließlich in seiner Wohnung auf der Kunstmühle vor Verdruss und Kummer in armseligen Verhältnissen um die Mitte des Jahres 1757, ohne im Geringsten etwas zustande gebracht zu haben. So viel zum Fontänenbau an dieser Stelle. Nach dem Frieden von Hubertusburg wird es weitere Informationen dazu geben.
+
+## 1749: Erneuerung des Großen Saals im Potsdamer Schloss
+
+[**page break p=107**] Im Jahr 1749 begann hauptsächlich die Erneuerung und Verzierung des Großen Saals im hiesigen Schloss. Schlüter hatte bereits 1695 das umlaufende Gesims aus Stuck gefertigt und darauf ansprechende Figuren angebracht. Nun sollten Wände und Fußboden vollständig aus schlesischem Marmor gefertigt werden, ein besonderes Gemälde an die Decke kommen und die vier vorhandenen großen Gemälde von van Tulden, Leygebe und Vaillant restauriert und durch verzierte Rahmen aufgewertet werden.
+
+Baumann unternahm bereits im Oktober und November 1747 eine Reise nach Schlesien, um
+:::
+

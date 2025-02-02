@@ -1,0 +1,44 @@
+project:
+  type: book
+  output-dir: _site
+
+book:
+  title: "AI Notebook Documentation"
+  author: "Gerd Graßhoff"
+  date: "2025-01-15"
+  chapters:
+    - 00-ensemble.qmd
+    - index.qmd
+    - 01-structure.qmd
+    - 02-models.qmd
+    - 03-features.qmd
+    - examples.qmd
+    - reference.qmd
+  sidebar:
+    style: docked
+    search: true
+  page-navigation: true
+  page-footer: "Copyright 2025, Gerd Graßhoff"
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true
+    toc-location: left
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    highlight-style: pygments
+    smooth-scroll: true
+    page-layout: full
+    grid:
+      sidebar-width: 350px
+      body-width: 1000px
+      margin-width: "0"
+      gutter-width: 1.5em
+    minimal: true
+    title-block-categories: false
+    title-block-style: plain
+    title-block-author-single: true
+    margin-header: "0" 

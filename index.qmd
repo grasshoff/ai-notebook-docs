@@ -1,0 +1,92 @@
+# Introduction
+
+AI Notebook is a tool for processing notebooks with AI-enhanced blocks and audio files. It supports multiple AI providers and offers a flexible template system for structured prompts.
+
+# Installation
+
+```bash
+pip install ainotebook
+```
+
+# Configuration
+
+Required environment variables:
+
+```bash
+OPENAI_API_KEY=sk-...
+GOOGLE_API_KEY=...
+ANTHROPIC_API_KEY=sk-ant-...
+GROQ_API_KEY=gsk_...
+```
+
+# Basic Usage
+
+## Text Processing
+
+Create a QMD file with AI blocks:
+
+```ai
+---
+model: claude-haiku
+template:
+  file: analyze.j2
+  variables:
+    TEXT: document.txt
+---
+Your instruction here
+```
+
+## Audio Processing
+
+Process audio files using supported models:
+
+```bash
+aiaudio file.mp3 --model whisper
+aiaudio file.mp3 --model gemini-pro
+```
+
+# Template System
+
+## Basic Templates
+
+Single template usage:
+
+```ai
+---
+model: gemini-2
+template:
+  file: translate.j2
+  variables:
+    TEXT: transcript
+    LANG: "German"
+---
+Additional instructions
+```
+
+## Multiple Templates
+
+Combine multiple templates:
+
+```ai
+---
+model: claude-sonnet
+template:
+  - file: analyze.j2
+    variables:
+      TEXT: document.txt
+      STYLE: "academic"
+  - file: summarize.j2
+    variables:
+      LENGTH: "short"
+---
+```
+
+# Output Structure
+
+Results are stored in organized directories:
+
+- `process/`: Generated responses
+  - `filename.json`: Text processing results
+  - `filename_audio.json`: Audio processing results
+- `ai-views/`: Generated visualizations
+  - `filename-vis.qmd`: Visual analysis notebooks 

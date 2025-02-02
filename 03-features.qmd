@@ -1,0 +1,73 @@
+---
+title: "AI Notebook Features"
+author: "Gerd Graßhoff"
+date: "2025-01-15"
+format:
+  html:
+    theme: sandstone
+    toc: true
+    toc-location: left
+    number-sections: true
+    code-fold: true
+---
+
+# Label System
+
+## Basic Usage
+
+Store a response with a label:
+
+```yaml
+---
+model: gemini-pro
+label: my_analysis
+---
+Analyze this text...
+```
+
+Reference within same notebook:
+
+```yaml
+---
+model: claude-haiku
+---
+Improve this analysis: {{my_analysis}}
+```
+
+## Cross-Notebook References
+
+Reference responses from other notebooks:
+
+```yaml
+---
+model: gemini-pro
+---
+Compare:
+1. {{notebook1:analysis_1}}
+2. {{notebook2:analysis_2}}
+```
+
+# Processing Behavior
+
+- `overwrite: false` (default): Skip if response exists
+- `overwrite: true`: Always process
+- Labels update even when blocks are skipped
+- Cross-references resolve before processing
+
+# Example Project
+
+```
+historical-analysis/
+├── notebooks/
+│   ├── document1.qmd
+│   ├── document2.qmd
+│   └── comparison.qmd
+├── process/
+│   ├── document1.json
+│   ├── document2.json
+│   └── comparison.json
+└── ai-views/
+    ├── document1-vis.qmd
+    ├── document2-vis.qmd
+    └── comparison-vis.qmd
+``` 

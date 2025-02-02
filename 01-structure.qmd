@@ -1,0 +1,49 @@
+---
+title: "AI Notebook Structure"
+author: "Gerd Graßhoff"
+date: "2025-01-15"
+format:
+  html:
+    theme: sandstone
+    toc: true
+    toc-location: left
+    number-sections: true
+    code-fold: true
+---
+
+# Package Structure
+
+```
+ai-notebook/
+├── src/
+│   └── ainotebook/
+│       ├── notebook.py      # Core processing
+│       ├── cli.py          # Command line interface
+│       ├── cli_quarto.py   # Visualization
+│       ├── settings.json   # Model configurations
+│       └── providers/      # AI model providers
+│           ├── anthropic.py
+│           ├── gemini.py
+│           ├── openai.py
+│           ├── groq.py
+│           └── ollama.py
+└── notebooks/             # Documentation
+    ├── 01-structure.qmd
+    ├── 02-models.qmd
+    └── 03-features.qmd
+```
+
+# Project Structure
+
+```
+your-project/
+├── notebooks/           # Source notebooks
+│   └── analysis.qmd    # Contains AI blocks
+├── process/            # Generated JSON files
+│   └── analysis.json   # Contains responses
+├── ai-views/           # Generated visualizations
+│   └── analysis-vis.qmd
+└── sources/           # Project resources
+    └── templates/     # Jinja2 templates
+        └── document.j2
+``` 

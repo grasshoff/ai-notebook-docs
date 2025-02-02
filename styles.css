@@ -1,0 +1,100 @@
+/* Typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Code blocks */
+pre {
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  padding: 1em;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* Navigation */
+.sidebar nav[role=doc-toc] ul>li>a.active {
+  border-left: 3px solid #0F2E3D;
+  color: #0F2E3D;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #0F2E3D;
+  font-weight: 600;
+  margin-top: 2em;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+/* Links */
+a {
+  color: #2C5282;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+th, td {
+  padding: 0.5em;
+  border: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+/* Mermaid diagrams */
+.mermaid {
+  margin: 2em 0;
+}
+
+/* Code folding */
+.code-fold-btn {
+  font-size: 0.9em;
+  color: #718096;
+}
+
+/* Callouts */
+.callout {
+  border-left: 4px solid #0F2E3D;
+  background-color: #f8f9fa;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+/* Grid layout adjustments */
+.grid {
+  display: grid;
+  gap: 2em;
+}
+
+/* Print styles */
+@media print {
+  .sidebar {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+  }
+  
+  pre, code {
+    font-size: 10pt;
+  }
+} 

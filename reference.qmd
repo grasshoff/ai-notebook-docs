@@ -1,0 +1,148 @@
+# API Reference
+
+## Core Classes
+
+### AINotebook
+
+Main class for notebook processing.
+
+```python
+class AINotebook:
+    def __init__(self, api_keys=None, config_file=None):
+        """Initialize AI Notebook.
+        
+        Args:
+            api_keys (dict): API keys for providers
+            config_file (str): Path to config file
+        """
+        
+    def process_file(self, file_path, overwrite=False):
+        """Process a notebook file.
+        
+        Args:
+            file_path (str): Path to QMD file
+            overwrite (bool): Force reprocessing
+        """
+        
+    def process_audio(self, file_path, model="whisper"):
+        """Process an audio file.
+        
+        Args:
+            file_path (str): Path to audio file
+            model (str): Model to use
+        """
+```
+
+## Configuration
+
+### settings.json
+
+```json
+{
+  "models": {
+    "claude-haiku": {
+      "provider": "anthropic",
+      "model": "claude-3-haiku",
+      "max_tokens": 4096
+    },
+    "gemini-pro": {
+      "provider": "google",
+      "model": "gemini-pro",
+      "max_tokens": 8192
+    }
+  },
+  "templates": {
+    "path": "templates",
+    "default_vars": {
+      "STYLE": "academic",
+      "LENGTH": "medium"
+    }
+  }
+}
+```
+
+### Template Format
+
+```yaml
+name: template_name
+description: Template description
+variables:
+  VAR1: string
+  VAR2: string
+prompt: |
+  Your prompt here with
+  {{VAR1}} and {{VAR2}}
+```
+
+## Command Line Interface
+
+### Basic Commands
+
+```bash
+# Process a notebook
+ainotebook process notebook.qmd
+
+# Process audio
+ainotebook audio recording.mp3 --model whisper
+
+# Generate visualization
+ainotebook visualize results.json
+```
+
+### Options
+
+```bash
+# Force reprocessing
+ainotebook process --overwrite
+
+# Specify config
+ainotebook process --config custom_config.json
+
+# Set model
+ainotebook process --model claude-haiku
+```
+
+## Output Formats
+
+### JSON Response
+
+```json
+{
+  "metadata": {
+    "file": "notebook.qmd",
+    "model": "claude-haiku",
+    "timestamp": "2024-03-15T10:30:00Z"
+  },
+  "blocks": [
+    {
+      "id": "block1",
+      "label": "analysis",
+      "model": "claude-haiku",
+      "prompt": "...",
+      "response": "...",
+      "tokens": 1234
+    }
+  ]
+}
+```
+
+### Visualization Options
+
+```python
+# Available metrics
+metrics = [
+    "response_time",
+    "token_usage",
+    "model_distribution",
+    "cost_analysis",
+    "template_usage"
+]
+
+# Chart types
+chart_types = [
+    "bar",
+    "line",
+    "scatter",
+    "heatmap",
+    "network"
+] 

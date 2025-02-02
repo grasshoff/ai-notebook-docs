@@ -1,0 +1,64 @@
+---
+title: AI-Notebooks
+author: Gerd Graßhoff
+date: "2025-01-15"
+format:
+  html:
+    theme: sandstone
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    highlight-style: github
+    fig-width: 8
+    fig-height: 6
+    fig-format: png
+    fig-dpi: 300
+    embed-resources: true
+---
+
+# AI-Notebooks
+
+## Groq-DeepSeek
+
+```ai
+---
+model: groq-deepseek
+overwrite: true
+preamble: Antworte ohne Einleitung oder Präambel. Behalte die Struktur des Textes bei. \n 
+template:
+  - file: document.j2
+    variables:
+      DESCRIPTION: Manger1789.txt
+---
+Sorgfältig den Deutschen Text wiedergeben, verbessere nur die Fehler oder alte Rechtschreibung. Korrigiere Trennungen. Breche lange Zeilen auf 70 Zeichen auf.
+```
+
+## Gemini-2.0-Flash-Thinking-Exp-01-21
+```ai
+---
+model: gemini-2.0-flash-thinking-exp-01-21
+preamble: Antworte ohne Einleitung oder Präambel. Behalte die Struktur des Textes bei. \n 
+template:
+  - file: document.j2
+    variables:
+      DESCRIPTION: Manger1789.txt
+---
+Sorgfältig den Deutschen Text wiedergeben, verbessere nur die Fehler oder alte Rechtschreibung. Korrigiere Trennungen. Breche lange Zeilen auf 70 Zeichen auf.
+```
+
+## O3-Mini
+
+```ai
+---
+model: o3-mini
+preamble: Antworte ohne Einleitung oder Präambel. Behalte die Struktur des Textes bei. \n 
+template:
+  - file: document.j2
+    variables:
+      DESCRIPTION: Manger1789.txt
+---
+Sorgfältig den Deutschen Text wiedergeben, verbessere nur die Fehler oder alte Rechtschreibung. Korrigiere Trennungen. Breche lange Zeilen auf 70 Zeichen auf.
+```
