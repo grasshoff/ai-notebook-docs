@@ -145,4 +145,4 @@ chart_types = [
     "scatter",
     "heatmap",
     "network"
-] 
+]
