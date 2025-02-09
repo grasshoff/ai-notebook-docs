@@ -1,0 +1,502 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI Notebook Documentation",
+    "section": "",
+    "text": "1 Introduction\nAI Notebook is a tool for processing notebooks with AI-enhanced blocks and audio files. It supports multiple AI providers and offers a flexible template system for structured prompts.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#direct-file-processing",
+    "href": "index.html#direct-file-processing",
+    "title": "AI Notebook Documentation",
+    "section": "5.1 1. Direct File Processing",
+    "text": "5.1 1. Direct File Processing\nfrom ainotebook import AINotebook\n\n# Initialize and process a file\nnotebook = AINotebook(\"your_notebook.qmd\")\nnotebook.process()",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#manual-setup",
+    "href": "index.html#manual-setup",
+    "title": "AI Notebook Documentation",
+    "section": "5.2 2. Manual Setup",
+    "text": "5.2 2. Manual Setup\nfrom ainotebook import AINotebook\n\n# Initialize without a file\nnotebook = AINotebook(debug=True)  # Enable debug mode for verbose output\n\n# Later process a file\nnotebook.parse_file(\"your_notebook.qmd\")\nnotebook.process()",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#directory-structure",
+    "href": "index.html#directory-structure",
+    "title": "AI Notebook Documentation",
+    "section": "5.3 Directory Structure",
+    "text": "5.3 Directory Structure\nAI Notebook expects the following directory structure:\nyour_project/\n├── sources/        # Templates and source files\n├── process/        # Processing results\n└── ai-views/       # Generated views\nYou can customize these paths in settings.json.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#text-processing",
+    "href": "index.html#text-processing",
+    "title": "AI Notebook Documentation",
+    "section": "6.1 Text Processing",
+    "text": "6.1 Text Processing\nCreate a QMD file with AI blocks:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "00-ensemble.html",
+    "href": "00-ensemble.html",
+    "title": "1  AI-Ensemble",
+    "section": "",
+    "text": "1.1 Components\nThe AI Notebook is part of a larger AI Ensemble that processes and analyzes documents using multiple AI models and tools.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>AI-Ensemble</span>"
+    ]
+  },
+  {
+    "objectID": "00-ensemble.html#components",
+    "href": "00-ensemble.html#components",
+    "title": "1  AI-Ensemble",
+    "section": "",
+    "text": "Document Processing\n\nText documents\nAudio files\nImages\nMarkdown/QMD files\n\nAI Models\n\nText Processing\n\nClaude 3 (Haiku, Sonnet)\nGemini Pro/2\nGPT Models\n\nAudio Processing\n\nWhisper\nGemini Audio\n\n\nOutput Generation\n\nStructured JSON responses\nVisual analysis notebooks\nInteractive visualizations",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>AI-Ensemble</span>"
+    ]
+  },
+  {
+    "objectID": "00-ensemble.html#integration",
+    "href": "00-ensemble.html#integration",
+    "title": "1  AI-Ensemble",
+    "section": "1.2 Integration",
+    "text": "1.2 Integration\nThe AI Notebook serves as the central integration point, coordinating: - Model selection and configuration - Template management - Response processing - Result visualization",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>AI-Ensemble</span>"
+    ]
+  },
+  {
+    "objectID": "01-structure.html",
+    "href": "01-structure.html",
+    "title": "3  AI Notebook Structure",
+    "section": "",
+    "text": "The AI Notebook is structured to process both text and audio files efficiently.\n\n4 Package Structure\nai-notebook/\n├── src/\n│   └── ainotebook/\n│       ├── notebook.py      # Core processing\n│       ├── cli.py          # Command line interface\n│       ├── cli_quarto.py   # Visualization\n│       ├── settings.json   # Model configurations\n│       └── providers/      # AI model providers\n│           ├── anthropic.py\n│           ├── gemini.py\n│           ├── openai.py\n│           ├── groq.py\n│           └── ollama.py\n└── notebooks/             # Documentation\n    ├── 01-structure.qmd\n    ├── 02-models.qmd\n    └── 03-features.qmd\n\n\n5 Project Structure\nyour-project/\n├── notebooks/           # Source notebooks\n│   └── analysis.qmd    # Contains AI blocks\n├── process/            # Generated JSON files\n│   └── analysis.json   # Contains responses\n├── ai-views/           # Generated visualizations\n│   └── analysis-vis.qmd\n└── sources/           # Project resources\n    └── templates/     # Jinja2 templates\n        └── document.j2",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>AI Notebook Structure</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html",
+    "href": "02-models.html",
+    "title": "4  AI Models",
+    "section": "",
+    "text": "5 AI Models",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#anthropic-models",
+    "href": "02-models.html#anthropic-models",
+    "title": "4  AI Models",
+    "section": "5.1 Anthropic Models",
+    "text": "5.1 Anthropic Models\n\nclaude-3-opus (175K context)\nclaude-3-sonnet (200K context)\nclaude-3-haiku (200K context)\nclaude-haiku (alias for claude-3-haiku)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#google-models",
+    "href": "02-models.html#google-models",
+    "title": "4  AI Models",
+    "section": "5.2 Google Models",
+    "text": "5.2 Google Models\n\ngemini-pro (alias for gemini-1.5-pro)\ngemini-2 (alias for gemini-2.0-flash-exp)\ngemini-2-thinking (alias for gemini-2.0-flash-thinking-exp-01-21)\ngemini-2-pro (alias for gemini-2.0-pro-exp-02-05)\ngemini-audio (alias for gemini-2.0-pro-exp-02-05, optimized for audio transcription)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#openai-models",
+    "href": "02-models.html#openai-models",
+    "title": "4  AI Models",
+    "section": "5.3 OpenAI Models",
+    "text": "5.3 OpenAI Models\n\ngpt-4\ngpt-4-turbo\ngpt-3.5-turbo",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#groq-models",
+    "href": "02-models.html#groq-models",
+    "title": "4  AI Models",
+    "section": "5.4 Groq Models",
+    "text": "5.4 Groq Models\n\nmixtral-8x7b-32768\nllama2-70b-4096\ndeepseek (alias for deepseek-r1-distill-qwen-32b)\ngroq-deepseek (alias for deepseek-r1-distill-llama-70b)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#audio-models",
+    "href": "02-models.html#audio-models",
+    "title": "4  AI Models",
+    "section": "5.5 Audio Models",
+    "text": "5.5 Audio Models\n\nwhisper (alias for whisper-large-v3)\nwhisper-turbo (alias for whisper-large-v3-turbo)\ngemini-audio (Gemini 2.0 model optimized for audio transcription)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "02-models.html#local-models-via-ollama",
+    "href": "02-models.html#local-models-via-ollama",
+    "title": "4  AI Models",
+    "section": "5.6 Local Models (via Ollama)",
+    "text": "5.6 Local Models (via Ollama)\nAny model available in your local Ollama installation.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>AI Models</span>"
+    ]
+  },
+  {
+    "objectID": "03-features.html",
+    "href": "03-features.html",
+    "title": "5  AI Notebook Features",
+    "section": "",
+    "text": "6 AI Notebook Features",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>AI Notebook Features</span>"
+    ]
+  },
+  {
+    "objectID": "03-features.html#basic-usage",
+    "href": "03-features.html#basic-usage",
+    "title": "5  AI Notebook Features",
+    "section": "7.1 Basic Usage",
+    "text": "7.1 Basic Usage\nStore a response with a label:\n---\nmodel: gemini-pro\nlabel: my_analysis\n---\nAnalyze this text...\nReference within same notebook:\n---\nmodel: claude-haiku\n---\nImprove this analysis: {{my_analysis}}",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>AI Notebook Features</span>"
+    ]
+  },
+  {
+    "objectID": "03-features.html#cross-notebook-references",
+    "href": "03-features.html#cross-notebook-references",
+    "title": "5  AI Notebook Features",
+    "section": "7.2 Cross-Notebook References",
+    "text": "7.2 Cross-Notebook References\nReference responses from other notebooks:\n---\nmodel: gemini-pro\n---\nCompare:\n1. {{notebook1:analysis_1}}\n2. {{notebook2:analysis_2}}",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>AI Notebook Features</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html",
+    "href": "04-github-pages.html",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "",
+    "text": "6.1 Prerequisites\nThis guide provides step-by-step instructions for setting up GitHub Pages for any ai-views directory, including creating individual SSH keys for repository access.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#prerequisites",
+    "href": "04-github-pages.html#prerequisites",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "",
+    "text": "Git installed on your system\nGitHub account\nBasic familiarity with terminal commands\nAccess to the ai-views directory you want to publish",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#step-1-create-a-new-ssh-key",
+    "href": "04-github-pages.html#step-1-create-a-new-ssh-key",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.2 Step 1: Create a New SSH Key",
+    "text": "6.2 Step 1: Create a New SSH Key\nEach ai-views directory should have its own SSH key for secure GitHub access. This practice ensures better security and management of different repositories.\n\nOpen your terminal\nGenerate a new RSA key pair:\nssh-keygen -t rsa -b 4096 -C \"your-email@example.com\" -f ~/.ssh/id_rsa_[project-name]\nReplace your-email@example.com with your GitHub email and [project-name] with a meaningful identifier.\nWhen prompted for a passphrase, you can either:\n\nPress Enter twice for no passphrase (less secure but more convenient)\nEnter a secure passphrase (recommended for sensitive repositories)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#step-2-add-ssh-key-to-github",
+    "href": "04-github-pages.html#step-2-add-ssh-key-to-github",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.3 Step 2: Add SSH Key to GitHub",
+    "text": "6.3 Step 2: Add SSH Key to GitHub\n\nCopy the public key content:\ncat ~/.ssh/id_rsa_[project-name].pub\nGo to GitHub.com and log in\nClick your profile photo → Settings\nSelect “SSH and GPG keys” from the sidebar\nClick “New SSH key”\nGive it a descriptive title (e.g., “AI-Views [Project Name]”)\nPaste the entire key (including ssh-rsa at the start and the email at the end)\nClick “Add SSH key”",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#step-3-initialize-git-repository",
+    "href": "04-github-pages.html#step-3-initialize-git-repository",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.4 Step 3: Initialize Git Repository",
+    "text": "6.4 Step 3: Initialize Git Repository\n\nNavigate to your ai-views directory:\ncd path/to/your/ai-views\nInitialize Git repository:\ngit init\ngit branch -M main\nAdd your files:\ngit add .\ngit commit -m \"Initial commit\"",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#step-4-create-github-repository",
+    "href": "04-github-pages.html#step-4-create-github-repository",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.5 Step 4: Create GitHub Repository",
+    "text": "6.5 Step 4: Create GitHub Repository\n\nGo to GitHub.com\nClick the “+” icon in the top right → “New repository”\nName your repository appropriately (e.g., “ai-views-[project-name]”)\nAdd a description (optional but recommended)\nChoose “Public” visibility for GitHub Pages functionality\nDo not initialize with README, .gitignore, or license\nClick “Create repository”",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#step-5-connect-and-push-to-github",
+    "href": "04-github-pages.html#step-5-connect-and-push-to-github",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.6 Step 5: Connect and Push to GitHub",
+    "text": "6.6 Step 5: Connect and Push to GitHub\n\nAdd the remote repository:\ngit remote add origin git@github.com:username/repository-name.git\nReplace username and repository-name with your GitHub username and repository name.\nPush your code:\ngit push -u origin main",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#step-6-enable-github-pages",
+    "href": "04-github-pages.html#step-6-enable-github-pages",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.7 Step 6: Enable GitHub Pages",
+    "text": "6.7 Step 6: Enable GitHub Pages\n\nGo to your repository on GitHub\nClick “Settings”\nScroll to “GitHub Pages” section\nUnder “Source”, select:\n\nBranch: main\nFolder: /docs\n\nClick “Save”",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#step-7-configure-quarto-for-github-pages",
+    "href": "04-github-pages.html#step-7-configure-quarto-for-github-pages",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.8 Step 7: Configure Quarto for GitHub Pages",
+    "text": "6.8 Step 7: Configure Quarto for GitHub Pages\n\nUpdate your _quarto.yml file:\nproject:\n  type: website\n  output-dir: docs\n\nwebsite:\n  title: \"Your Project Title\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\n    toc: true\nBuild your site:\nquarto render\nPush the generated docs:\ngit add docs/\ngit commit -m \"Add generated site\"\ngit push",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#maintenance-and-updates",
+    "href": "04-github-pages.html#maintenance-and-updates",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.9 Maintenance and Updates",
+    "text": "6.9 Maintenance and Updates\nTo update your GitHub Pages site:\n\nMake changes to your content\nRender the site:\nquarto render\nCommit and push changes:\ngit add .\ngit commit -m \"Update site content\"\ngit push",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#troubleshooting",
+    "href": "04-github-pages.html#troubleshooting",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.10 Troubleshooting",
+    "text": "6.10 Troubleshooting\n\n6.10.1 Common Issues\n\nSSH Key Permission Denied\n\nVerify key is added to GitHub\nCheck key permissions: chmod 600 ~/.ssh/id_rsa_[project-name]\nTest connection: ssh -T git@github.com\n\nPush Rejected\n\nPull latest changes: git pull origin main --allow-unrelated-histories\nResolve conflicts if any\nPush again: git push origin main\n\nGitHub Pages Not Updating\n\nCheck if docs folder is in the correct location\nVerify GitHub Pages settings in repository\nWait a few minutes for changes to propagate\n\n\n\n\n6.10.2 Getting Help\nIf you encounter issues:\n\nCheck Git error messages\nReview GitHub Pages documentation\nConsult the AI Ensembles team\nOpen an issue in the repository",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#best-practices",
+    "href": "04-github-pages.html#best-practices",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.11 Best Practices",
+    "text": "6.11 Best Practices\n\nUse meaningful commit messages\nKeep repository clean and organized\nRegularly update content\nTest locally before pushing\nMaintain clear documentation",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "04-github-pages.html#additional-resources",
+    "href": "04-github-pages.html#additional-resources",
+    "title": "6  Setting up GitHub Pages for AI-Views Directories",
+    "section": "6.12 Additional Resources",
+    "text": "6.12 Additional Resources\n\nGitHub Pages Documentation\nQuarto Website Documentation\nGit Documentation",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Setting up GitHub Pages for AI-Views Directories</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html",
+    "href": "examples.html",
+    "title": "7  Usage Examples",
+    "section": "",
+    "text": "7.1 Basic Usage\nThis section provides practical examples of using AI Notebook in different scenarios.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#basic-usage",
+    "href": "examples.html#basic-usage",
+    "title": "7  Usage Examples",
+    "section": "",
+    "text": "7.1.1 Simple Text Analysis\n---\nmodel: claude-haiku\nlabel: initial_analysis\n---\nAnalyze the following text for key themes and arguments:\n\n{{document}}\n\n\n7.1.2 Multi-Model Analysis\n---\nmodel: claude-sonnet\nlabel: expert_analysis\n---\nProvide expert analysis of this topic.\n\n---\nmodel: gemini-pro\nlabel: review\n---\nReview and enhance this analysis: {{expert_analysis}}\n\n---\nmodel: gpt-4\nlabel: synthesis\n---\nSynthesize both perspectives:\n1. Expert Analysis: {{expert_analysis}}\n2. Review: {{review}}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#template-usage",
+    "href": "examples.html#template-usage",
+    "title": "7  Usage Examples",
+    "section": "7.2 Template Usage",
+    "text": "7.2 Template Usage\n\n7.2.1 Single Template\n---\nmodel: gemini-pro\ntemplate: academic_analysis.j2\nfiles:\n  text: source.txt\n  style: style_guide.txt\n---\n\n\n7.2.2 Multiple Templates\n---\nmodel: claude-sonnet\ntemplate:\n  - file: context.j2\n    variables:\n      PERIOD: \"Victorian Era\"\n      FOCUS: \"Social Reform\"\n  - file: analysis.j2\n    variables:\n      DEPTH: \"detailed\"\n      STYLE: \"academic\"\n---",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#cross-reference-examples",
+    "href": "examples.html#cross-reference-examples",
+    "title": "7  Usage Examples",
+    "section": "7.3 Cross-Reference Examples",
+    "text": "7.3 Cross-Reference Examples\n\n7.3.1 Basic References\n---\nmodel: claude-sonnet\n---\nCompare these analyses:\n\n1. Initial: {{initial_analysis}}\n2. Expert: {{expert_analysis}}\n3. Review: {{review}}\n\n\n7.3.2 Cross-Notebook References\n---\nmodel: gemini-pro\n---\nSynthesize findings:\n\n1. Historical Context: {{history:context}}\n2. Modern Analysis: {{modern:analysis}}\n3. Current Data: {{data:statistics}}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#audio-processing",
+    "href": "examples.html#audio-processing",
+    "title": "7  Usage Examples",
+    "section": "7.4 Audio Processing",
+    "text": "7.4 Audio Processing\n\n7.4.1 Basic Transcription\nfrom ainotebook import process_audio\n\n# Using default Gemini 2.0 model\ntranscript = process_audio(\n    \"lecture.mp3\",\n    model=\"gemini-audio\",  # Uses Gemini 2.0 by default\n    language=\"en\"\n)\n\n# Using Whisper model\ntranscript = process_audio(\n    \"lecture.mp3\",\n    model=\"whisper\",  # Explicitly use Whisper model\n    language=\"en\"\n)\n\n\n7.4.2 Advanced Audio Analysis\nfrom ainotebook import process_audio, analyze_text\n\n# Transcribe with Gemini 2.0 and speaker detection\ntranscript = process_audio(\n    \"interview.mp3\",\n    model=\"gemini-audio\",\n    language=\"en\",\n    speakers=True,\n    speaker_count=2\n)\n\n# Analyze transcript with Claude\nanalysis = analyze_text(\n    transcript,\n    model=\"claude-haiku\",\n    template=\"interview_analysis.j2\",\n    variables={\n        \"focus\": \"key_insights\",\n        \"style\": \"academic\"\n    }\n)\n\n# Multi-model analysis pipeline\nresults = {\n    # Initial transcription with Gemini 2.0\n    'transcript': process_audio(\"recording.mp3\", model=\"gemini-audio\"),\n    \n    # Backup transcription with Whisper for comparison\n    'whisper_transcript': process_audio(\"recording.mp3\", model=\"whisper\"),\n    \n    # Analysis of both transcripts\n    'analysis': analyze_text(\n        \"Compare these transcripts:\\n\\n1. {transcript}\\n\\n2. {whisper_transcript}\",\n        model=\"claude-sonnet\"\n    )\n}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#project-organization",
+    "href": "examples.html#project-organization",
+    "title": "7  Usage Examples",
+    "section": "7.5 Project Organization",
+    "text": "7.5 Project Organization\nA typical AI Notebook project structure:\nresearch-project/\n├── notebooks/\n│   ├── 01-data-collection.qmd\n│   ├── 02-analysis.qmd\n│   └── 03-conclusions.qmd\n├── templates/\n│   ├── analysis.j2\n│   └── synthesis.j2\n├── sources/\n│   ├── data.csv\n│   └── references.bib\n├── process/\n│   ├── data-collection.json\n│   └── analysis.json\n└── visualizations/\n    └── analysis-dashboard.qmd",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#command-line-usage",
+    "href": "examples.html#command-line-usage",
+    "title": "7  Usage Examples",
+    "section": "7.6 Command Line Usage",
+    "text": "7.6 Command Line Usage\n\n7.6.1 Processing Files\n# Process a single notebook\nainotebook process notebook.qmd\n\n# Process all notebooks in a directory\nainotebook process notebooks/\n\n# Process without visualization\nainotebook process notebook.qmd --no-visualize\n\n\n7.6.2 Creating New Projects\n# Create a new project\nainotebook init my-research\n\n# Create with custom name\nainotebook init path/to/project --name \"Research Project\"\n\n\n7.6.3 Debugging\n# Enable debug output\nainotebook process notebook.qmd --debug\n\n# Create visualization with debug info\nainotebook visualize notebook.qmd --debug",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "examples.html#advanced-features",
+    "href": "examples.html#advanced-features",
+    "title": "7  Usage Examples",
+    "section": "7.7 Advanced Features",
+    "text": "7.7 Advanced Features\n\n7.7.1 Custom Templates\n{# analysis.j2 #}\nBased on the provided {{style}} analysis approach:\n\n1. Key Findings:\n{% for finding in findings %}\n   - {{ finding }}\n{% endfor %}\n\n2. Methodology:\n{{ methodology }}\n\n3. Conclusions:\n{{ conclusions }}\n\n\n7.7.2 Response Processing\n---\nmodel: claude-sonnet\nprocess:\n  - extract_key_points\n  - format_citations\n  - check_consistency\nlabel: processed_analysis\n---\nAnalyze the following research paper...\n\n\n7.7.3 Visualization\nfrom ainotebook import visualize\n\n# Create interactive dashboard\ndashboard = visualize.create_dashboard(\n    data=\"process/*.json\",\n    metrics=[\"response_time\", \"token_usage\"],\n    interactive=True\n)\n\n# Generate comparison report\nreport = visualize.create_report(\n    responses=[\"analysis_1\", \"analysis_2\"],\n    type=\"comparison\"\n)\nThese examples demonstrate the core features and flexibility of AI Notebook. For more detailed information about specific features, please refer to the Reference section.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Usage Examples</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html",
+    "href": "reference.html",
+    "title": "8  API Reference",
+    "section": "",
+    "text": "8.1 Core Components\nThis section provides detailed documentation for AI Notebook’s API and features.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#core-components",
+    "href": "reference.html#core-components",
+    "title": "8  API Reference",
+    "section": "",
+    "text": "8.1.1 AINotebook\nThe main class for processing AI-enhanced notebooks.\nfrom ainotebook import AINotebook\n\nnotebook = AINotebook(\n    filename,           # Path to the notebook file\n    debug=False,        # Enable debug output\n    process_dir=None    # Custom directory for process files\n)\n\n8.1.1.1 Methods\n\nprocess(): Process all AI blocks in the notebook\ncompose(block): Compose a prompt from an AI block\ngenerate(params): Generate a response using the specified model\nreplace_labels(text): Replace label references in text\nload_label_value(label_ref): Load a value for a label reference\n\n\n\n\n8.1.2 BlockParser\nHandles parsing of notebook files and AI blocks.\nfrom ainotebook.notebook import BlockParser\n\nparser = BlockParser(debug=False)\nblocks = parser.parse_file(\"notebook.qmd\")\n\n8.1.2.1 Methods\n\nparse_file(filename): Parse a notebook file into blocks\n_process_ai_block(yaml_lines, instruct_lines): Process YAML and instruction lines\n\n\n\n\n8.1.3 TemplateProcessor\nManages template loading and rendering.\nfrom ainotebook.notebook import TemplateProcessor\n\nprocessor = TemplateProcessor(\n    template_dir,    # Directory containing templates\n    debug=False      # Enable debug output\n)\n\n8.1.3.1 Methods\n\nprocess(template_spec, variables): Process a template with variables",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#command-line-interface",
+    "href": "reference.html#command-line-interface",
+    "title": "8  API Reference",
+    "section": "8.2 Command Line Interface",
+    "text": "8.2 Command Line Interface\n\n8.2.1 Commands\n\n8.2.1.1 Process\nProcess notebooks and generate visualizations.\nainotebook process [options] input\n\nOptions:\n  --debug         Enable debug output\n  --no-visualize  Skip visualization generation\n\n\n8.2.1.2 Initialize\nCreate a new AI Notebook project.\nainotebook init [options] path\n\nOptions:\n  --name NAME     Project name\n  --debug         Enable debug output\n\n\n8.2.1.3 Visualize\nGenerate visualizations from processed notebooks.\nainotebook visualize [options] file\n\nOptions:\n  --debug         Enable debug output\n\n\n8.2.1.4 Audio\nProcess audio files and generate transcriptions.\naiaudio [OPTIONS] FILE\n\nArguments:\n  FILE                      Audio file to transcribe\n\nOptions:\n  --model MODEL             Model to use (default: gemini-audio)\n  --language LANG          Language of the audio (default: en)\n  --speakers              Enable speaker detection\n  --speaker-count COUNT    Expected number of speakers\n  --template NAME         Template name to use (e.g., basic, detailed, transcribe)\n  --template-var KEY VALUE Template variables (can be used multiple times)\n  --list-templates        List available templates\n  --create-templates      Create default templates in ~/.ai/templates/audio\n  --template-path PATH    Additional path to look for templates\n  --overwrite            Overwrite existing output files\n  --output PATH          Output file path (default: process/input_file_audio.json)\n  --debug                Enable debug output\n  --version              Show version information\n\n\n\n8.2.2 Output Files\nBy default, transcription results are saved to a JSON file with the naming pattern: - Input file: example.mp3 - Output file: example_audio.json\nYou can control output handling in two ways: 1. Specify custom output path: --output path/to/output.json 2. Control overwriting: --overwrite flag\nExamples:\n# Default output (creates example_audio.json)\naiaudio example.mp3\n\n# Custom output location\naiaudio recording.mp3 --output transcripts/result.json\n\n# Force overwrite existing file\naiaudio interview.mp3 --overwrite\n\n# Specify both\naiaudio lecture.mp3 --output results/transcript.json --overwrite\nIf an output file already exists and --overwrite is not specified, the command will exit with an error message:\n$ aiaudio recording.mp3\nOutput file already exists: recording_audio.json\nUse --overwrite to replace existing file",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#ai-block-format",
+    "href": "reference.html#ai-block-format",
+    "title": "8  API Reference",
+    "section": "8.3 AI Block Format",
+    "text": "8.3 AI Block Format\nAI blocks are defined in notebooks using the following format:\n\n8.3.1 Basic Block\n```ai\n---\nmodel: model_name\nlabel: optional_label\n---\nYour instruction text here\n\n### Template Block\n\n```yaml\n```ai\n---\nmodel: model_name\ntemplate: template_name.j2\nfiles:\n  var_name: file_path\n---\n\n### Multi-Template Block\n\n```yaml\n```ai\n---\nmodel: model_name\ntemplate:\n  - file: template1.j2\n    variables:\n      VAR1: value1\n  - file: template2.j2\n    variables:\n      VAR2: value2\n---\n\n## Templates\n\nTemplates use Jinja2 syntax and support:\n\n- Variable interpolation: `{ variable }`\n- Control structures: `{% if condition %}...{% endif %}`\n- Loops: `{% for item in items %}...{% endfor %}`\n- Filters: `{ text | upper }`\n- Macros and includes\n\nExample template:\n\n```jinja\n{# analysis_template.j2 #}\nAnalyze the following text using {{style}} approach:\n\n{{text}}\n\nFocus on:\n{% for point in focus_points %}\n- {{point}}\n{% endfor %}\n\nAdditional context:\n{{context | default('No additional context provided')}}",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#label-references",
+    "href": "reference.html#label-references",
+    "title": "8  API Reference",
+    "section": "8.4 Label References",
+    "text": "8.4 Label References\nLabels can be referenced within the same notebook or across notebooks:\n\nSame notebook: {label_name}\nCross-notebook: {notebook:label_name}\n\nExample:\n```ai\n---\nmodel: claude-sonnet\n---\nCompare:\n1. Current Analysis: {{current_analysis}}\n2. Historical Context: {{history:context}}\n\n## Audio Processing\n\n### Command Line Interface\n\nThe `aiaudio` command provides a flexible interface for audio transcription with template support:\n\n```bash\naiaudio [OPTIONS] FILE\n\nArguments:\n  FILE                      Audio file to transcribe\n\nOptions:\n  --model MODEL             Model to use (default: gemini-audio)\n  --language LANG          Language of the audio (default: en)\n  --speakers              Enable speaker detection\n  --speaker-count COUNT    Expected number of speakers\n  --template NAME         Template name to use (e.g., basic, detailed, transcribe)\n  --template-var KEY VALUE Template variables (can be used multiple times)\n  --list-templates        List available templates\n  --create-templates      Create default templates in ~/.ai/templates/audio\n  --template-path PATH    Additional path to look for templates\n  --overwrite            Overwrite existing output files\n  --output PATH          Output file path (default: process/input_file_audio.json)\n  --debug                Enable debug output\n  --version              Show version information\n\n8.4.0.1 Basic Usage Examples\n\nSimple Transcription:\n\n# Basic transcription with default settings (English, no speaker detection)\naiaudio recording.mp3\n\n# German transcription\naiaudio recording.mp3 --language de\n\n# Using a specific model\naiaudio recording.mp3 --model whisper\n\nSpeaker Detection:\n\n# Enable speaker detection with 2 speakers\naiaudio interview.mp3 --speakers --speaker-count 2\n\n# German transcription with speaker detection\naiaudio interview.mp3 --language de --speakers --speaker-count 3\n\nUsing Templates:\n\n# Use transcribe template with speaker detection\naiaudio lecture.mp3 --template transcribe --speakers --speaker-count 2\n\n# Detailed template with custom variables\naiaudio lecture.mp3 --template detailed \\\n  --template-var domain \"physics\" \\\n  --template-var format \"technical\"\n\nOutput Control:\n\n# Custom output location\naiaudio recording.mp3 --output transcripts/result.json\n\n# Force overwrite existing file\naiaudio interview.mp3 --overwrite\n\n# Combine output options\naiaudio lecture.mp3 --output results/transcript.json --overwrite\n\nDebug and Template Management:\n\n# Show debug information\naiaudio recording.mp3 --debug\n\n# List available templates\naiaudio --list-templates\n\n# List templates with debug info\naiaudio --list-templates --debug\n\n# Create default templates\naiaudio --create-templates\n\n\n8.4.0.2 Output File Handling\nBy default, transcription results are saved in a process directory next to the input file: - Input file: path/to/example.mp3 - Default output: path/to/process/example_audio.json\nYou can control output handling in two ways: 1. Specify custom output path: --output path/to/output.json 2. Control overwriting: --overwrite flag\nIf an output file already exists and --overwrite is not specified, the command will exit with an error message:\nOutput file already exists: example_audio.json\nUse --overwrite to replace existing file\n\n\n8.4.0.3 Template Variables\nTemplates can access the following built-in variables: - language: The language specified (default: “en”) - speakers: Boolean indicating if speaker detection is enabled - speaker_count: Number of expected speakers (if speakers=True)\nCustom variables can be added using --template-var:\naiaudio recording.mp3 --template transcribe \\\n  --template-var format \"technical\" \\\n  --template-var timestamps \"true\"\n\n\n8.4.0.4 Debug Output\nUsing --debug shows detailed information about: - File paths and locations - Template search paths - Template variables - The exact prompt being sent to the model - Processing configuration - Progress updates\nExample debug output:\naiaudio recording.mp3 --template transcribe --debug\n\nPaths:\n  Input: /absolute/path/to/recording.mp3\n  Process dir: /absolute/path/to/process\n  Output: /absolute/path/to/process/recording_audio.json\n\nSearching for templates in:\n  - /Users/username/.ai/templates\n  - /Users/username/.ai/templates/audio\n\nTemplate variables:\n  language: en\n  speakers: false\n  speaker_count: null\n\nProcessing configuration:\n  model: gemini-2.0-pro-exp-02-05\n  language: en\n  speakers: false\n  template: transcribe\n\n\n8.4.0.5 Template Locations\nTemplates are searched in the following order: 1. ~/.ai/templates/audio/ (user-specific) 2. .ai/templates/audio/ (project-specific) 3. templates/audio/ (local) 4. Custom paths specified via --template-path\n\n\n8.4.1 Template Management\n\n8.4.1.1 Listing Templates\nUse --list-templates to see available templates:\n$ aiaudio --list-templates\n\nAvailable templates:\n===================\nIn ~/.ai/templates/audio:\n  - basic\n  - detailed\n\n# With debug information\n$ aiaudio --list-templates --debug\nAvailable templates:\n===================\nIn ~/.ai/templates/audio:\n  - basic\n    Full path: /Users/username/.ai/templates/audio/basic.j2\n  - detailed\n    Full path: /Users/username/.ai/templates/audio/detailed.j2\n\n\n8.4.1.2 Creating Default Templates\nInitialize the default templates:\n$ aiaudio --create-templates\nCreated default templates in ~/.ai/templates/audio\nThis creates two default templates: - basic.j2: Simple transcription with basic formatting - detailed.j2: Detailed transcription with speaker detection and timestamps\n\n\n\n8.4.2 Python API\nThe audio processing functionality can be accessed programmatically:\nfrom ainotebook import process_audio\n\n# Basic transcription\ntranscript = process_audio(\n    \"lecture.mp3\",\n    model=\"gemini-audio\",\n    language=\"en\"\n)\n\n# Advanced usage with template\ntranscript = process_audio(\n    \"interview.mp3\",\n    model=\"gemini-audio\",\n    template=\"detailed\",\n    template_vars={\n        \"focus\": \"technical_terms\",\n        \"timestamps\": True,\n        \"domain\": \"physics\"\n    },\n    speakers=True,\n    speaker_count=2,\n    debug=True  # Enable debug output\n)\n\n\n8.4.3 Template System\n\n8.4.3.1 Template Locations\nTemplates are searched in the following order: 1. ~/.ai/templates/audio/ (user-specific) 2. .ai/templates/audio/ (project-specific) 3. templates/audio/ (local) 4. Custom paths specified via --template-path\n\n\n8.4.3.2 Default Templates\n\nBasic Template (basic.j2):\n\nTranscribe the following audio file with these specifications:\nLanguage: {{language}}\n{% if speakers %}\nDetect speakers: Yes\nNumber of speakers: {{speaker_count}}\n{% endif %}\n\nAdditional instructions:\n- Maintain original punctuation\n- Include speaker labels if detected\n- Note unclear segments\n\nDetailed Template (detailed.j2):\n\nPerform a detailed transcription of the audio with:\nLanguage: {{language}}\n{% if speakers %}\nSpeaker detection enabled\nExpected speakers: {{speaker_count}}\n{% endif %}\n\nFocus on:\n- Accurate speaker attribution\n- Emotional tone and emphasis\n- Background sounds and context\n- Technical terminology precision\n- Time-stamped segments\n\n\n\n8.4.4 Template Variables\n\n8.4.4.1 Built-in Variables\n\nlanguage: Audio language (default: “en”)\nspeakers: Speaker detection flag (boolean)\nspeaker_count: Number of expected speakers (integer)\n\n\n\n8.4.4.2 Custom Variables\nAdd custom variables using: - CLI: --template-var KEY VALUE - Python: template_vars dictionary\nExample template using custom variables:\n{# technical.j2 #}\nPerform technical transcription with focus on:\nLanguage: {{language}}\nDomain: {{domain|default('general')}}\nTimestamp Interval: {{timestamp_interval|default(30)}} seconds\n\n{% if technical_terms %}\nTechnical Terms Focus:\n- Preserve specialized vocabulary\n- Mark uncertain technical terms\n- Note mathematical formulas\n{% endif %}\n\n\n\n8.4.5 Best Practices\n\nTemplate Organization\n\nStore user-specific templates in ~/.ai/templates/audio/\nKeep project-specific templates in .ai/templates/audio/\nUse clear, descriptive template names\n\nTemplate Design\n\nInclude clear documentation in templates\nUse Jinja2 defaults for optional variables\nKeep templates focused and modular\n\nError Handling\n\nUse --debug for troubleshooting\nCheck template paths when templates aren’t found\nVerify template variables are being passed correctly\n\nPerformance\n\nChoose appropriate models for the task\nUse speaker detection only when needed\nConsider template complexity impact on processing time",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#visualization",
+    "href": "reference.html#visualization",
+    "title": "8  API Reference",
+    "section": "8.5 Visualization",
+    "text": "8.5 Visualization\n\n8.5.1 Dashboard Creation\n\n\n\n:::{#quarto-navigation-envelope .hidden}\n[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl\"}\n[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1uYXZiYXItdGl0bGU=\"}\n[&lt;span class='chapter-number'&gt;7&lt;/span&gt;  &lt;span class='chapter-title'&gt;Usage Examples&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1wcmV2\"}\n[&lt;span class='chapter-number'&gt;1&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI-Ensemble&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMC1lbnNlbWJsZS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLUVuc2VtYmxlPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;2&lt;/span&gt;  &lt;span class='chapter-title'&gt;Introduction&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4yPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkludHJvZHVjdGlvbjwvc3Bhbj4=\"}\n[&lt;span class='chapter-number'&gt;3&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Notebook Structure&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMS1zdHJ1Y3R1cmUuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BSS1Ob3RlYm9vay1TdHJ1Y3R1cmU8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;4&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Models&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMi1tb2RlbHMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+NDwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BSS1Nb2RlbHM8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;5&lt;/span&gt;  &lt;span class='chapter-title'&gt;AI Notebook Features&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wMy1mZWF0dXJlcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz41PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLU5vdGVib29rLUZlYXR1cmVzPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;6&lt;/span&gt;  &lt;span class='chapter-title'&gt;Setting up GitHub Pages for AI-Views Directories&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi8wNC1naXRodWItcGFnZXMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Njwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5TZXR0aW5nLXVwLUdpdEh1Yi1QYWdlcy1mb3ItQUktVmlld3MtRGlyZWN0b3JpZXM8L3NwYW4+\"}\n[&lt;span class='chapter-number'&gt;7&lt;/span&gt;  &lt;span class='chapter-title'&gt;Usage Examples&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9leGFtcGxlcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz43PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlVzYWdlLUV4YW1wbGVzPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;8&lt;/span&gt;  &lt;span class='chapter-title'&gt;API Reference&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWludC1zaWRlYmFyOi9yZWZlcmVuY2UuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+ODwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BUEktUmVmZXJlbmNlPC9zcGFuPg==\"}\n[&lt;span class='chapter-number'&gt;8&lt;/span&gt;  &lt;span class='chapter-title'&gt;API Reference&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+ODwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BUEktUmVmZXJlbmNlPC9zcGFuPg==\"}\n\n:::{.hidden .quarto-markdown-envelope-contents render-id=\"Zm9vdGVyLWNlbnRlcg==\"}\nCopyright 2025, Gerd Graßhoff\n:::\n\n\n:::{.hidden .quarto-markdown-envelope-contents render-id=\"bWFyZ2luLWhlYWRlcg==\"}\n\n:::{.margin-header-item}\n0\n:::\n\n:::\n\n:::\n\n\n\n:::{#quarto-meta-markdown .hidden}\n[[8]{.chapter-number}  [API Reference]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW1ldGF0aXRsZQ==\"}\n[[8]{.chapter-number}  [API Reference]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=\"}\n[[8]{.chapter-number}  [API Reference]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW9nY2FyZHRpdGxl\"}\n[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW1ldGFzaXRlbmFtZQ==\"}\n[]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw==\"}\n[]{.hidden .quarto-markdown-envelope-contents render-id=\"cXVhcnRvLW9nY2FyZGRkZXNj\"}\n:::\n\n\n\n\n&lt;!-- --&gt;\n\n::: {.quarto-embedded-source-code}\n```````````````````{.markdown shortcodes=\"false\"}\n# API Reference\n\nThis section provides detailed documentation for AI Notebook's API and features.\n\n## Core Components\n\n### AINotebook\n\nThe main class for processing AI-enhanced notebooks.\n\n```python\nfrom ainotebook import AINotebook\n\nnotebook = AINotebook(\n    filename,           # Path to the notebook file\n    debug=False,        # Enable debug output\n    process_dir=None    # Custom directory for process files\n)\n\n8.5.1.1 Methods\n\nprocess(): Process all AI blocks in the notebook\ncompose(block): Compose a prompt from an AI block\ngenerate(params): Generate a response using the specified model\nreplace_labels(text): Replace label references in text\nload_label_value(label_ref): Load a value for a label reference\n\n\n\n\n8.5.2 BlockParser\nHandles parsing of notebook files and AI blocks.\nfrom ainotebook.notebook import BlockParser\n\nparser = BlockParser(debug=False)\nblocks = parser.parse_file(\"notebook.qmd\")\n\n8.5.2.1 Methods\n\nparse_file(filename): Parse a notebook file into blocks\n_process_ai_block(yaml_lines, instruct_lines): Process YAML and instruction lines\n\n\n\n\n8.5.3 TemplateProcessor\nManages template loading and rendering.\nfrom ainotebook.notebook import TemplateProcessor\n\nprocessor = TemplateProcessor(\n    template_dir,    # Directory containing templates\n    debug=False      # Enable debug output\n)\n\n8.5.3.1 Methods\n\nprocess(template_spec, variables): Process a template with variables",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#command-line-interface-1",
+    "href": "reference.html#command-line-interface-1",
+    "title": "8  API Reference",
+    "section": "8.6 Command Line Interface",
+    "text": "8.6 Command Line Interface\n\n8.6.1 Commands\n\n8.6.1.1 Process\nProcess notebooks and generate visualizations.\nainotebook process [options] input\n\nOptions:\n  --debug         Enable debug output\n  --no-visualize  Skip visualization generation\n\n\n8.6.1.2 Initialize\nCreate a new AI Notebook project.\nainotebook init [options] path\n\nOptions:\n  --name NAME     Project name\n  --debug         Enable debug output\n\n\n8.6.1.3 Visualize\nGenerate visualizations from processed notebooks.\nainotebook visualize [options] file\n\nOptions:\n  --debug         Enable debug output\n\n\n8.6.1.4 Audio\nProcess audio files and generate transcriptions.\naiaudio [OPTIONS] FILE\n\nArguments:\n  FILE                      Audio file to transcribe\n\nOptions:\n  --model MODEL             Model to use (default: gemini-audio)\n  --language LANG          Language of the audio (default: en)\n  --speakers              Enable speaker detection\n  --speaker-count COUNT    Expected number of speakers\n  --template NAME         Template name to use (e.g., basic, detailed, transcribe)\n  --template-var KEY VALUE Template variables (can be used multiple times)\n  --list-templates        List available templates\n  --create-templates      Create default templates in ~/.ai/templates/audio\n  --template-path PATH    Additional path to look for templates\n  --overwrite            Overwrite existing output files\n  --output PATH          Output file path (default: process/input_file_audio.json)\n  --debug                Enable debug output\n  --version              Show version information\n\n\n\n8.6.2 Output Files\nBy default, transcription results are saved to a JSON file with the naming pattern: - Input file: example.mp3 - Output file: example_audio.json\nYou can control output handling in two ways: 1. Specify custom output path: --output path/to/output.json 2. Control overwriting: --overwrite flag\nExamples:\n# Default output (creates example_audio.json)\naiaudio example.mp3\n\n# Custom output location\naiaudio recording.mp3 --output transcripts/result.json\n\n# Force overwrite existing file\naiaudio interview.mp3 --overwrite\n\n# Specify both\naiaudio lecture.mp3 --output results/transcript.json --overwrite\nIf an output file already exists and --overwrite is not specified, the command will exit with an error message:\n$ aiaudio recording.mp3\nOutput file already exists: recording_audio.json\nUse --overwrite to replace existing file",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#ai-block-format-1",
+    "href": "reference.html#ai-block-format-1",
+    "title": "8  API Reference",
+    "section": "8.7 AI Block Format",
+    "text": "8.7 AI Block Format\nAI blocks are defined in notebooks using the following format:\n\n8.7.1 Basic Block\n```ai\n---\nmodel: model_name\nlabel: optional_label\n---\nYour instruction text here\n\n### Template Block\n\n```yaml\n```ai\n---\nmodel: model_name\ntemplate: template_name.j2\nfiles:\n  var_name: file_path\n---\n\n### Multi-Template Block\n\n```yaml\n```ai\n---\nmodel: model_name\ntemplate:\n  - file: template1.j2\n    variables:\n      VAR1: value1\n  - file: template2.j2\n    variables:\n      VAR2: value2\n---\n\n## Templates\n\nTemplates use Jinja2 syntax and support:\n\n- Variable interpolation: `{ variable }`\n- Control structures: `{% if condition %}...{% endif %}`\n- Loops: `{% for item in items %}...{% endfor %}`\n- Filters: `{ text | upper }`\n- Macros and includes\n\nExample template:\n\n```jinja\n{# analysis_template.j2 #}\nAnalyze the following text using {{style}} approach:\n\n{{text}}\n\nFocus on:\n{% for point in focus_points %}\n- {{point}}\n{% endfor %}\n\nAdditional context:\n{{context | default('No additional context provided')}}",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#label-references-1",
+    "href": "reference.html#label-references-1",
+    "title": "8  API Reference",
+    "section": "8.8 Label References",
+    "text": "8.8 Label References\nLabels can be referenced within the same notebook or across notebooks:\n\nSame notebook: {label_name}\nCross-notebook: {notebook:label_name}\n\nExample:\n```ai\n---\nmodel: claude-sonnet\n---\nCompare:\n1. Current Analysis: {{current_analysis}}\n2. Historical Context: {{history:context}}\n\n## Audio Processing\n\n### Command Line Interface\n\nThe `aiaudio` command provides a flexible interface for audio transcription with template support:\n\n```bash\naiaudio [OPTIONS] FILE\n\nArguments:\n  FILE                      Audio file to transcribe\n\nOptions:\n  --model MODEL             Model to use (default: gemini-audio)\n  --language LANG          Language of the audio (default: en)\n  --speakers              Enable speaker detection\n  --speaker-count COUNT    Expected number of speakers\n  --template NAME         Template name to use (e.g., basic, detailed, transcribe)\n  --template-var KEY VALUE Template variables (can be used multiple times)\n  --list-templates        List available templates\n  --create-templates      Create default templates in ~/.ai/templates/audio\n  --template-path PATH    Additional path to look for templates\n  --overwrite            Overwrite existing output files\n  --output PATH          Output file path (default: process/input_file_audio.json)\n  --debug                Enable debug output\n  --version              Show version information\n\n8.8.0.1 Basic Usage Examples\n\nSimple Transcription:\n\n# Basic transcription with default settings (English, no speaker detection)\naiaudio recording.mp3\n\n# German transcription\naiaudio recording.mp3 --language de\n\n# Using a specific model\naiaudio recording.mp3 --model whisper\n\nSpeaker Detection:\n\n# Enable speaker detection with 2 speakers\naiaudio interview.mp3 --speakers --speaker-count 2\n\n# German transcription with speaker detection\naiaudio interview.mp3 --language de --speakers --speaker-count 3\n\nUsing Templates:\n\n# Use transcribe template with speaker detection\naiaudio lecture.mp3 --template transcribe --speakers --speaker-count 2\n\n# Detailed template with custom variables\naiaudio lecture.mp3 --template detailed \\\n  --template-var domain \"physics\" \\\n  --template-var format \"technical\"\n\nOutput Control:\n\n# Custom output location\naiaudio recording.mp3 --output transcripts/result.json\n\n# Force overwrite existing file\naiaudio interview.mp3 --overwrite\n\n# Combine output options\naiaudio lecture.mp3 --output results/transcript.json --overwrite\n\nDebug and Template Management:\n\n# Show debug information\naiaudio recording.mp3 --debug\n\n# List available templates\naiaudio --list-templates\n\n# List templates with debug info\naiaudio --list-templates --debug\n\n# Create default templates\naiaudio --create-templates\n\n\n8.8.0.2 Output File Handling\nBy default, transcription results are saved in a process directory next to the input file: - Input file: path/to/example.mp3 - Default output: path/to/process/example_audio.json\nYou can control output handling in two ways: 1. Specify custom output path: --output path/to/output.json 2. Control overwriting: --overwrite flag\nIf an output file already exists and --overwrite is not specified, the command will exit with an error message:\nOutput file already exists: example_audio.json\nUse --overwrite to replace existing file\n\n\n8.8.0.3 Template Variables\nTemplates can access the following built-in variables: - language: The language specified (default: “en”) - speakers: Boolean indicating if speaker detection is enabled - speaker_count: Number of expected speakers (if speakers=True)\nCustom variables can be added using --template-var:\naiaudio recording.mp3 --template transcribe \\\n  --template-var format \"technical\" \\\n  --template-var timestamps \"true\"\n\n\n8.8.0.4 Debug Output\nUsing --debug shows detailed information about: - File paths and locations - Template search paths - Template variables - The exact prompt being sent to the model - Processing configuration - Progress updates\nExample debug output:\naiaudio recording.mp3 --template transcribe --debug\n\nPaths:\n  Input: /absolute/path/to/recording.mp3\n  Process dir: /absolute/path/to/process\n  Output: /absolute/path/to/process/recording_audio.json\n\nSearching for templates in:\n  - /Users/username/.ai/templates\n  - /Users/username/.ai/templates/audio\n\nTemplate variables:\n  language: en\n  speakers: false\n  speaker_count: null\n\nProcessing configuration:\n  model: gemini-2.0-pro-exp-02-05\n  language: en\n  speakers: false\n  template: transcribe\n\n\n8.8.0.5 Template Locations\nTemplates are searched in the following order: 1. ~/.ai/templates/audio/ (user-specific) 2. .ai/templates/audio/ (project-specific) 3. templates/audio/ (local) 4. Custom paths specified via --template-path\n\n\n8.8.1 Template Management\n\n8.8.1.1 Listing Templates\nUse --list-templates to see available templates:\n$ aiaudio --list-templates\n\nAvailable templates:\n===================\nIn ~/.ai/templates/audio:\n  - basic\n  - detailed\n\n# With debug information\n$ aiaudio --list-templates --debug\nAvailable templates:\n===================\nIn ~/.ai/templates/audio:\n  - basic\n    Full path: /Users/username/.ai/templates/audio/basic.j2\n  - detailed\n    Full path: /Users/username/.ai/templates/audio/detailed.j2\n\n\n8.8.1.2 Creating Default Templates\nInitialize the default templates:\n$ aiaudio --create-templates\nCreated default templates in ~/.ai/templates/audio\nThis creates two default templates: - basic.j2: Simple transcription with basic formatting - detailed.j2: Detailed transcription with speaker detection and timestamps\n\n\n\n8.8.2 Python API\nThe audio processing functionality can be accessed programmatically:\nfrom ainotebook import process_audio\n\n# Basic transcription\ntranscript = process_audio(\n    \"lecture.mp3\",\n    model=\"gemini-audio\",\n    language=\"en\"\n)\n\n# Advanced usage with template\ntranscript = process_audio(\n    \"interview.mp3\",\n    model=\"gemini-audio\",\n    template=\"detailed\",\n    template_vars={\n        \"focus\": \"technical_terms\",\n        \"timestamps\": True,\n        \"domain\": \"physics\"\n    },\n    speakers=True,\n    speaker_count=2,\n    debug=True  # Enable debug output\n)\n\n\n8.8.3 Template System\n\n8.8.3.1 Template Locations\nTemplates are searched in the following order: 1. ~/.ai/templates/audio/ (user-specific) 2. .ai/templates/audio/ (project-specific) 3. templates/audio/ (local) 4. Custom paths specified via --template-path\n\n\n8.8.3.2 Default Templates\n\nBasic Template (basic.j2):\n\nTranscribe the following audio file with these specifications:\nLanguage: {{language}}\n{% if speakers %}\nDetect speakers: Yes\nNumber of speakers: {{speaker_count}}\n{% endif %}\n\nAdditional instructions:\n- Maintain original punctuation\n- Include speaker labels if detected\n- Note unclear segments\n\nDetailed Template (detailed.j2):\n\nPerform a detailed transcription of the audio with:\nLanguage: {{language}}\n{% if speakers %}\nSpeaker detection enabled\nExpected speakers: {{speaker_count}}\n{% endif %}\n\nFocus on:\n- Accurate speaker attribution\n- Emotional tone and emphasis\n- Background sounds and context\n- Technical terminology precision\n- Time-stamped segments\n\n\n\n8.8.4 Template Variables\n\n8.8.4.1 Built-in Variables\n\nlanguage: Audio language (default: “en”)\nspeakers: Speaker detection flag (boolean)\nspeaker_count: Number of expected speakers (integer)\n\n\n\n8.8.4.2 Custom Variables\nAdd custom variables using: - CLI: --template-var KEY VALUE - Python: template_vars dictionary\nExample template using custom variables:\n{# technical.j2 #}\nPerform technical transcription with focus on:\nLanguage: {{language}}\nDomain: {{domain|default('general')}}\nTimestamp Interval: {{timestamp_interval|default(30)}} seconds\n\n{% if technical_terms %}\nTechnical Terms Focus:\n- Preserve specialized vocabulary\n- Mark uncertain technical terms\n- Note mathematical formulas\n{% endif %}\n\n\n\n8.8.5 Best Practices\n\nTemplate Organization\n\nStore user-specific templates in ~/.ai/templates/audio/\nKeep project-specific templates in .ai/templates/audio/\nUse clear, descriptive template names\n\nTemplate Design\n\nInclude clear documentation in templates\nUse Jinja2 defaults for optional variables\nKeep templates focused and modular\n\nError Handling\n\nUse --debug for troubleshooting\nCheck template paths when templates aren’t found\nVerify template variables are being passed correctly\n\nPerformance\n\nChoose appropriate models for the task\nUse speaker detection only when needed\nConsider template complexity impact on processing time",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  },
+  {
+    "objectID": "reference.html#visualization-1",
+    "href": "reference.html#visualization-1",
+    "title": "8  API Reference",
+    "section": "8.9 Visualization",
+    "text": "8.9 Visualization\n\n8.9.1 Dashboard Creation\n\n:::",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>API Reference</span>"
+    ]
+  }
+]
