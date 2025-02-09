@@ -1,0 +1,411 @@
+Your instruction text here
+```
+```
+
+### Template Block
+
+```yaml
+```ai
+---
+model: model_name
+template: template_name.j2
+files:
+  var_name: file_path
+---
+```
+```
+
+### Multi-Template Block
+
+```yaml
+```ai
+---
+model: model_name
+template:
+  - file: template1.j2
+    variables:
+      VAR1: value1
+  - file: template2.j2
+    variables:
+      VAR2: value2
+---
+```
+```
+
+## Templates
+
+Templates use Jinja2 syntax and support:
+
+- Variable interpolation: `{{ variable }}`
+- Control structures: `{% if condition %}...{% endif %}`
+- Loops: `{% for item in items %}...{% endfor %}`
+- Filters: `{{ text | upper }}`
+- Macros and includes
+
+Example template:
+
+```jinja
+{# analysis_template.j2 #}
+Analyze the following text using {{style}} approach:
+
+{{text}}
+
+Focus on:
+{% for point in focus_points %}
+- {{point}}
+{% endfor %}
+
+Additional context:
+{{context | default('No additional context provided')}}
+```
+
+## Label References
+
+Labels can be referenced within the same notebook or across notebooks:
+
+- Same notebook: `{{label_name}}`
+- Cross-notebook: `{{notebook:label_name}}`
+
+Example:
+
+```yaml
+```ai
+---
+model: claude-sonnet
+---
+Compare:
+1. Current Analysis: {{current_analysis}}
+2. Historical Context: {{history:context}}
+```
+```
+
+## Audio Processing
+
+### Command Line Interface
+
+The `aiaudio` command provides a flexible interface for audio transcription with template support:
+
+```bash
+aiaudio [OPTIONS] FILE
+
+Arguments:
+  FILE                      Audio file to transcribe
+
+Options:
+  --model MODEL             Model to use (default: gemini-audio)
+  --language LANG          Language of the audio (default: en)
+  --speakers              Enable speaker detection
+  --speaker-count COUNT    Expected number of speakers
+  --template NAME         Template name to use (e.g., basic, detailed, transcribe)
+  --template-var KEY VALUE Template variables (can be used multiple times)
+  --list-templates        List available templates
+  --create-templates      Create default templates in ~/.ai/templates/audio
+  --template-path PATH    Additional path to look for templates
+  --overwrite            Overwrite existing output files
+  --output PATH          Output file path (default: process/input_file_audio.json)
+  --debug                Enable debug output
+  --version              Show version information
+```
+
+#### Basic Usage Examples
+
+1. Simple Transcription:
+```bash
+# Basic transcription with default settings (English, no speaker detection)
+aiaudio recording.mp3
+
+# German transcription
+aiaudio recording.mp3 --language de
+
+# Using a specific model
+aiaudio recording.mp3 --model whisper
+```
+
+2. Speaker Detection:
+```bash
+# Enable speaker detection with 2 speakers
+aiaudio interview.mp3 --speakers --speaker-count 2
+
+# German transcription with speaker detection
+aiaudio interview.mp3 --language de --speakers --speaker-count 3
+```
+
+3. Using Templates:
+```bash
+# Use transcribe template with speaker detection
+aiaudio lecture.mp3 --template transcribe --speakers --speaker-count 2
+
+# Detailed template with custom variables
+aiaudio lecture.mp3 --template detailed \
+  --template-var domain "physics" \
+  --template-var format "technical"
+```
+
+4. Output Control:
+```bash
+# Custom output location
+aiaudio recording.mp3 --output transcripts/result.json
+
+# Force overwrite existing file
+aiaudio interview.mp3 --overwrite
+
+# Combine output options
+aiaudio lecture.mp3 --output results/transcript.json --overwrite
+```
+
+5. Debug and Template Management:
+```bash
+# Show debug information
+aiaudio recording.mp3 --debug
+
+# List available templates
+aiaudio --list-templates
+
+# List templates with debug info
+aiaudio --list-templates --debug
+
+# Create default templates
+aiaudio --create-templates
+```
+
+#### Output File Handling
+
+By default, transcription results are saved in a `process` directory next to the input file:
+- Input file: `path/to/example.mp3`
+- Default output: `path/to/process/example_audio.json`
+
+You can control output handling in two ways:
+1. Specify custom output path: `--output path/to/output.json`
+2. Control overwriting: `--overwrite` flag
+
+If an output file already exists and `--overwrite` is not specified, the command will exit with an error message:
+```bash
+Output file already exists: example_audio.json
+Use --overwrite to replace existing file
+```
+
+#### Template Variables
+
+Templates can access the following built-in variables:
+- `language`: The language specified (default: "en")
+- `speakers`: Boolean indicating if speaker detection is enabled
+- `speaker_count`: Number of expected speakers (if speakers=True)
+
+Custom variables can be added using `--template-var`:
+```bash
+aiaudio recording.mp3 --template transcribe \
+  --template-var format "technical" \
+  --template-var timestamps "true"
+```
+
+#### Debug Output
+
+Using `--debug` shows detailed information about:
+- File paths and locations
+- Template search paths
+- Template variables
+- The exact prompt being sent to the model
+- Processing configuration
+- Progress updates
+
+Example debug output:
+```bash
+aiaudio recording.mp3 --template transcribe --debug
+
+Paths:
+  Input: /absolute/path/to/recording.mp3
+  Process dir: /absolute/path/to/process
+  Output: /absolute/path/to/process/recording_audio.json
+
+Searching for templates in:
+  - /Users/username/.ai/templates
+  - /Users/username/.ai/templates/audio
+
+Template variables:
+  language: en
+  speakers: false
+  speaker_count: null
+
+Processing configuration:
+  model: gemini-2.0-pro-exp-02-05
+  language: en
+  speakers: false
+  template: transcribe
+```
+
+#### Template Locations
+
+Templates are searched in the following order:
+1. `~/.ai/templates/audio/` (user-specific)
+2. `.ai/templates/audio/` (project-specific)
+3. `templates/audio/` (local)
+4. Custom paths specified via `--template-path`
+
+### Template Management
+
+#### Listing Templates
+
+Use `--list-templates` to see available templates:
+
+```bash
+$ aiaudio --list-templates
+
+Available templates:
+===================
+In ~/.ai/templates/audio:
+  - basic
+  - detailed
+
+# With debug information
+$ aiaudio --list-templates --debug
+Available templates:
+===================
+In ~/.ai/templates/audio:
+  - basic
+    Full path: /Users/username/.ai/templates/audio/basic.j2
+  - detailed
+    Full path: /Users/username/.ai/templates/audio/detailed.j2
+```
+
+#### Creating Default Templates
+
+Initialize the default templates:
+
+```bash
+$ aiaudio --create-templates
+Created default templates in ~/.ai/templates/audio
+```
+
+This creates two default templates:
+- `basic.j2`: Simple transcription with basic formatting
+- `detailed.j2`: Detailed transcription with speaker detection and timestamps
+
+### Python API
+
+The audio processing functionality can be accessed programmatically:
+
+```python
+from ainotebook import process_audio
+
+# Basic transcription
+transcript = process_audio(
+    "lecture.mp3",
+    model="gemini-audio",
+    language="en"
+)
+
+# Advanced usage with template
+transcript = process_audio(
+    "interview.mp3",
+    model="gemini-audio",
+    template="detailed",
+    template_vars={
+        "focus": "technical_terms",
+        "timestamps": True,
+        "domain": "physics"
+    },
+    speakers=True,
+    speaker_count=2,
+    debug=True  # Enable debug output
+)
+```
+
+### Template System
+
+#### Template Locations
+
+Templates are searched in the following order:
+1. `~/.ai/templates/audio/` (user-specific)
+2. `.ai/templates/audio/` (project-specific)
+3. `templates/audio/` (local)
+4. Custom paths specified via `--template-path`
+
+#### Default Templates
+
+1. Basic Template (`basic.j2`):
+```jinja
+Transcribe the following audio file with these specifications:
+Language: {{language}}
+{% if speakers %}
+Detect speakers: Yes
+Number of speakers: {{speaker_count}}
+{% endif %}
+
+Additional instructions:
+- Maintain original punctuation
+- Include speaker labels if detected
+- Note unclear segments
+```
+
+2. Detailed Template (`detailed.j2`):
+```jinja
+Perform a detailed transcription of the audio with:
+Language: {{language}}
+{% if speakers %}
+Speaker detection enabled
+Expected speakers: {{speaker_count}}
+{% endif %}
+
+Focus on:
+- Accurate speaker attribution
+- Emotional tone and emphasis
+- Background sounds and context
+- Technical terminology precision
+- Time-stamped segments
+```
+
+### Template Variables
+
+#### Built-in Variables
+- `language`: Audio language (default: "en")
+- `speakers`: Speaker detection flag (boolean)
+- `speaker_count`: Number of expected speakers (integer)
+
+#### Custom Variables
+Add custom variables using:
+- CLI: `--template-var KEY VALUE`
+- Python: `template_vars` dictionary
+
+Example template using custom variables:
+```jinja
+{# technical.j2 #}
+Perform technical transcription with focus on:
+Language: {{language}}
+Domain: {{domain|default('general')}}
+Timestamp Interval: {{timestamp_interval|default(30)}} seconds
+
+{% if technical_terms %}
+Technical Terms Focus:
+- Preserve specialized vocabulary
+- Mark uncertain technical terms
+- Note mathematical formulas
+{% endif %}
+```
+
+### Best Practices
+
+1. **Template Organization**
+   - Store user-specific templates in `~/.ai/templates/audio/`
+   - Keep project-specific templates in `.ai/templates/audio/`
+   - Use clear, descriptive template names
+
+2. **Template Design**
+   - Include clear documentation in templates
+   - Use Jinja2 defaults for optional variables
+   - Keep templates focused and modular
+
+3. **Error Handling**
+   - Use `--debug` for troubleshooting
+   - Check template paths when templates aren't found
+   - Verify template variables are being passed correctly
+
+4. **Performance**
+   - Choose appropriate models for the task
+   - Use speaker detection only when needed
+   - Consider template complexity impact on processing time
+
+## Visualization
+
+### Dashboard Creation
+
+```

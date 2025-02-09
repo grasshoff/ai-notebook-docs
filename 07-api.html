@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; Template Block – AI Notebook Documentation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./06-User-Guide.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-dfe731579c350265d9b32bf6996da55c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07-API.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Template Block</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">
+      AI Notebook Documentation
+      </a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-AI-Universe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">AI Universe</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-AI-Ensemble.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">AI Ensemble</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-AI-Models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AI Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-AI-Notebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">AI Notebook</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-GitHub-Pages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Setting up GitHub Pages</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-User-Guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">User Guide</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-API.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Template Block</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#label-references" id="toc-label-references" class="nav-link active" data-scroll-target="#label-references"><span class="header-section-number">8.1</span> Label References</a>
+  <ul class="collapse">
+  <li><a href="#template-management" id="toc-template-management" class="nav-link" data-scroll-target="#template-management"><span class="header-section-number">8.1.1</span> Template Management</a></li>
+  <li><a href="#python-api" id="toc-python-api" class="nav-link" data-scroll-target="#python-api"><span class="header-section-number">8.1.2</span> Python API</a></li>
+  <li><a href="#template-system" id="toc-template-system" class="nav-link" data-scroll-target="#template-system"><span class="header-section-number">8.1.3</span> Template System</a></li>
+  <li><a href="#template-variables-1" id="toc-template-variables-1" class="nav-link" data-scroll-target="#template-variables-1"><span class="header-section-number">8.1.4</span> Template Variables</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices"><span class="header-section-number">8.1.5</span> Best Practices</a></li>
+  </ul></li>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">8.2</span> Visualization</a>
+  <ul class="collapse">
+  <li><a href="#dashboard-creation" id="toc-dashboard-creation" class="nav-link" data-scroll-target="#dashboard-creation"><span class="header-section-number">8.2.1</span> Dashboard Creation</a></li>
+  </ul></li>
+  <li><a href="#label-references-1" id="toc-label-references-1" class="nav-link" data-scroll-target="#label-references-1"><span class="header-section-number">8.3</span> Label References</a>
+  <ul class="collapse">
+  <li><a href="#template-management-1" id="toc-template-management-1" class="nav-link" data-scroll-target="#template-management-1"><span class="header-section-number">8.3.1</span> Template Management</a></li>
+  <li><a href="#python-api-1" id="toc-python-api-1" class="nav-link" data-scroll-target="#python-api-1"><span class="header-section-number">8.3.2</span> Python API</a></li>
+  <li><a href="#template-system-1" id="toc-template-system-1" class="nav-link" data-scroll-target="#template-system-1"><span class="header-section-number">8.3.3</span> Template System</a></li>
+  <li><a href="#template-variables-3" id="toc-template-variables-3" class="nav-link" data-scroll-target="#template-variables-3"><span class="header-section-number">8.3.4</span> Template Variables</a></li>
+  <li><a href="#best-practices-1" id="toc-best-practices-1" class="nav-link" data-scroll-target="#best-practices-1"><span class="header-section-number">8.3.5</span> Best Practices</a></li>
+  </ul></li>
+  <li><a href="#visualization-1" id="toc-visualization-1" class="nav-link" data-scroll-target="#visualization-1"><span class="header-section-number">8.4</span> Visualization</a>
+  <ul class="collapse">
+  <li><a href="#dashboard-creation-1" id="toc-dashboard-creation-1" class="nav-link" data-scroll-target="#dashboard-creation-1"><span class="header-section-number">8.4.1</span> Dashboard Creation</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Template Block</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Your instruction text here</p>
+<pre><code></code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at">```ai</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span><span class="at"> model_name</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span><span class="at"> template_name.j2</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">files</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">var_name</span><span class="kw">:</span><span class="at"> file_path</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<pre><code>
+### Multi-Template Block
+
+```yaml
+```ai
+---
+model: model_name
+template:
+  - file: template1.j2
+    variables:
+      VAR1: value1
+  - file: template2.j2
+    variables:
+      VAR2: value2
+---</code></pre>
+<pre><code>
+## Templates
+
+Templates use Jinja2 syntax and support:
+
+- Variable interpolation: `{ variable }`
+- Control structures: `{% if condition %}...{% endif %}`
+- Loops: `{% for item in items %}...{% endfor %}`
+- Filters: `{ text | upper }`
+- Macros and includes
+
+Example template:
+
+```jinja
+{# analysis_template.j2 #}
+Analyze the following text using {{style}} approach:
+
+{{text}}
+
+Focus on:
+{% for point in focus_points %}
+- {{point}}
+{% endfor %}
+
+Additional context:
+{{context | default('No additional context provided')}}</code></pre>
+<section id="label-references" class="level2" data-number="8.1">
+<h2 data-number="8.1" data-anchor-id="label-references"><span class="header-section-number">8.1</span> Label References</h2>
+<p>Labels can be referenced within the same notebook or across notebooks:</p>
+<ul>
+<li>Same notebook: <code>{label_name}</code></li>
+<li>Cross-notebook: <code>{notebook:label_name}</code></li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="at">```ai</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span><span class="at"> claude-sonnet</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Compare</span><span class="kw">:</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">1. Current Analysis</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at">{current_analysis</span><span class="kw">}</span><span class="at">}</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">2. Historical Context</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at">{history:context</span><span class="kw">}</span><span class="at">}</span></span></code></pre></div>
+<pre><code>
+## Audio Processing
+
+### Command Line Interface
+
+The `aiaudio` command provides a flexible interface for audio transcription with template support:
+
+```bash
+aiaudio [OPTIONS] FILE
+
+Arguments:
+  FILE                      Audio file to transcribe
+
+Options:
+  --model MODEL             Model to use (default: gemini-audio)
+  --language LANG          Language of the audio (default: en)
+  --speakers              Enable speaker detection
+  --speaker-count COUNT    Expected number of speakers
+  --template NAME         Template name to use (e.g., basic, detailed, transcribe)
+  --template-var KEY VALUE Template variables (can be used multiple times)
+  --list-templates        List available templates
+  --create-templates      Create default templates in ~/.ai/templates/audio
+  --template-path PATH    Additional path to look for templates
+  --overwrite            Overwrite existing output files
+  --output PATH          Output file path (default: process/input_file_audio.json)
+  --debug                Enable debug output
+  --version              Show version information</code></pre>
+<section id="basic-usage-examples" class="level4" data-number="8.1.0.1">
+<h4 data-number="8.1.0.1" data-anchor-id="basic-usage-examples"><span class="header-section-number">8.1.0.1</span> Basic Usage Examples</h4>
+<ol type="1">
+<li>Simple Transcription:</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic transcription with default settings (English, no speaker detection)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># German transcription</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--language</span> de</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Using a specific model</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--model</span> whisper</span></code></pre></div>
+<ol start="2" type="1">
+<li>Speaker Detection:</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable speaker detection with 2 speakers</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> interview.mp3 <span class="at">--speakers</span> <span class="at">--speaker-count</span> 2</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># German transcription with speaker detection</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> interview.mp3 <span class="at">--language</span> de <span class="at">--speakers</span> <span class="at">--speaker-count</span> 3</span></code></pre></div>
+<ol start="3" type="1">
+<li>Using Templates:</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use transcribe template with speaker detection</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> lecture.mp3 <span class="at">--template</span> transcribe <span class="at">--speakers</span> <span class="at">--speaker-count</span> 2</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed template with custom variables</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> lecture.mp3 <span class="at">--template</span> detailed <span class="dt">\</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">--template-var</span> domain <span class="st">"physics"</span> <span class="dt">\</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">--template-var</span> format <span class="st">"technical"</span></span></code></pre></div>
+<ol start="4" type="1">
+<li>Output Control:</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Custom output location</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--output</span> transcripts/result.json</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Force overwrite existing file</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> interview.mp3 <span class="at">--overwrite</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine output options</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> lecture.mp3 <span class="at">--output</span> results/transcript.json <span class="at">--overwrite</span></span></code></pre></div>
+<ol start="5" type="1">
+<li>Debug and Template Management:</li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Show debug information</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--debug</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># List available templates</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> <span class="at">--list-templates</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># List templates with debug info</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> <span class="at">--list-templates</span> <span class="at">--debug</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create default templates</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> <span class="at">--create-templates</span></span></code></pre></div>
+</section>
+<section id="output-file-handling" class="level4" data-number="8.1.0.2">
+<h4 data-number="8.1.0.2" data-anchor-id="output-file-handling"><span class="header-section-number">8.1.0.2</span> Output File Handling</h4>
+<p>By default, transcription results are saved in a <code>process</code> directory next to the input file: - Input file: <code>path/to/example.mp3</code> - Default output: <code>path/to/process/example_audio.json</code></p>
+<p>You can control output handling in two ways: 1. Specify custom output path: <code>--output path/to/output.json</code> 2. Control overwriting: <code>--overwrite</code> flag</p>
+<p>If an output file already exists and <code>--overwrite</code> is not specified, the command will exit with an error message:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Output</span> file already exists: example_audio.json</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Use</span> <span class="at">--overwrite</span> to replace existing file</span></code></pre></div>
+</section>
+<section id="template-variables" class="level4" data-number="8.1.0.3">
+<h4 data-number="8.1.0.3" data-anchor-id="template-variables"><span class="header-section-number">8.1.0.3</span> Template Variables</h4>
+<p>Templates can access the following built-in variables: - <code>language</code>: The language specified (default: “en”) - <code>speakers</code>: Boolean indicating if speaker detection is enabled - <code>speaker_count</code>: Number of expected speakers (if speakers=True)</p>
+<p>Custom variables can be added using <code>--template-var</code>:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--template</span> transcribe <span class="dt">\</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--template-var</span> format <span class="st">"technical"</span> <span class="dt">\</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--template-var</span> timestamps <span class="st">"true"</span></span></code></pre></div>
+</section>
+<section id="debug-output" class="level4" data-number="8.1.0.4">
+<h4 data-number="8.1.0.4" data-anchor-id="debug-output"><span class="header-section-number">8.1.0.4</span> Debug Output</h4>
+<p>Using <code>--debug</code> shows detailed information about: - File paths and locations - Template search paths - Template variables - The exact prompt being sent to the model - Processing configuration - Progress updates</p>
+<p>Example debug output:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--template</span> transcribe <span class="at">--debug</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Paths:</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Input:</span> /absolute/path/to/recording.mp3</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Process</span> dir: /absolute/path/to/process</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Output:</span> /absolute/path/to/process/recording_audio.json</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Searching</span> for templates in:</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> /Users/username/.ai/templates</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> /Users/username/.ai/templates/audio</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="ex">Template</span> variables:</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="ex">language:</span> en</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="ex">speakers:</span> false</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="ex">speaker_count:</span> null</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="ex">Processing</span> configuration:</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="ex">model:</span> gemini-2.0-pro-exp-02-05</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  <span class="ex">language:</span> en</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="ex">speakers:</span> false</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="ex">template:</span> transcribe</span></code></pre></div>
+</section>
+<section id="template-locations" class="level4" data-number="8.1.0.5">
+<h4 data-number="8.1.0.5" data-anchor-id="template-locations"><span class="header-section-number">8.1.0.5</span> Template Locations</h4>
+<p>Templates are searched in the following order: 1. <code>~/.ai/templates/audio/</code> (user-specific) 2. <code>.ai/templates/audio/</code> (project-specific) 3. <code>templates/audio/</code> (local) 4. Custom paths specified via <code>--template-path</code></p>
+</section>
+<section id="template-management" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" data-anchor-id="template-management"><span class="header-section-number">8.1.1</span> Template Management</h3>
+<section id="listing-templates" class="level4" data-number="8.1.1.1">
+<h4 data-number="8.1.1.1" data-anchor-id="listing-templates"><span class="header-section-number">8.1.1.1</span> Listing Templates</h4>
+<p>Use <code>--list-templates</code> to see available templates:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> aiaudio <span class="at">--list-templates</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Available</span> templates:</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="ex">===================</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ex">In</span> ~/.ai/templates/audio:</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> basic</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> detailed</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># With debug information</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> aiaudio <span class="at">--list-templates</span> <span class="at">--debug</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Available</span> templates:</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="ex">===================</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="ex">In</span> ~/.ai/templates/audio:</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> basic</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="ex">Full</span> path: /Users/username/.ai/templates/audio/basic.j2</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> detailed</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">Full</span> path: /Users/username/.ai/templates/audio/detailed.j2</span></code></pre></div>
+</section>
+<section id="creating-default-templates" class="level4" data-number="8.1.1.2">
+<h4 data-number="8.1.1.2" data-anchor-id="creating-default-templates"><span class="header-section-number">8.1.1.2</span> Creating Default Templates</h4>
+<p>Initialize the default templates:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> aiaudio <span class="at">--create-templates</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Created</span> default templates in ~/.ai/templates/audio</span></code></pre></div>
+<p>This creates two default templates: - <code>basic.j2</code>: Simple transcription with basic formatting - <code>detailed.j2</code>: Detailed transcription with speaker detection and timestamps</p>
+</section>
+</section>
+<section id="python-api" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" data-anchor-id="python-api"><span class="header-section-number">8.1.2</span> Python API</h3>
+<p>The audio processing functionality can be accessed programmatically:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ainotebook <span class="im">import</span> process_audio</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic transcription</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>transcript <span class="op">=</span> process_audio(</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lecture.mp3"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gemini-audio"</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    language<span class="op">=</span><span class="st">"en"</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Advanced usage with template</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>transcript <span class="op">=</span> process_audio(</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"interview.mp3"</span>,</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gemini-audio"</span>,</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    template<span class="op">=</span><span class="st">"detailed"</span>,</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    template_vars<span class="op">=</span>{</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"focus"</span>: <span class="st">"technical_terms"</span>,</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"timestamps"</span>: <span class="va">True</span>,</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"domain"</span>: <span class="st">"physics"</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    speakers<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    speaker_count<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    debug<span class="op">=</span><span class="va">True</span>  <span class="co"># Enable debug output</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+</section>
+<section id="template-system" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" data-anchor-id="template-system"><span class="header-section-number">8.1.3</span> Template System</h3>
+<section id="template-locations-1" class="level4" data-number="8.1.3.1">
+<h4 data-number="8.1.3.1" data-anchor-id="template-locations-1"><span class="header-section-number">8.1.3.1</span> Template Locations</h4>
+<p>Templates are searched in the following order: 1. <code>~/.ai/templates/audio/</code> (user-specific) 2. <code>.ai/templates/audio/</code> (project-specific) 3. <code>templates/audio/</code> (local) 4. Custom paths specified via <code>--template-path</code></p>
+</section>
+<section id="default-templates" class="level4" data-number="8.1.3.2">
+<h4 data-number="8.1.3.2" data-anchor-id="default-templates"><span class="header-section-number">8.1.3.2</span> Default Templates</h4>
+<ol type="1">
+<li>Basic Template (<code>basic.j2</code>):</li>
+</ol>
+<pre class="jinja"><code>Transcribe the following audio file with these specifications:
+Language: {{language}}
+{% if speakers %}
+Detect speakers: Yes
+Number of speakers: {{speaker_count}}
+{% endif %}
+
+Additional instructions:
+- Maintain original punctuation
+- Include speaker labels if detected
+- Note unclear segments</code></pre>
+<ol start="2" type="1">
+<li>Detailed Template (<code>detailed.j2</code>):</li>
+</ol>
+<pre class="jinja"><code>Perform a detailed transcription of the audio with:
+Language: {{language}}
+{% if speakers %}
+Speaker detection enabled
+Expected speakers: {{speaker_count}}
+{% endif %}
+
+Focus on:
+- Accurate speaker attribution
+- Emotional tone and emphasis
+- Background sounds and context
+- Technical terminology precision
+- Time-stamped segments</code></pre>
+</section>
+</section>
+<section id="template-variables-1" class="level3" data-number="8.1.4">
+<h3 data-number="8.1.4" data-anchor-id="template-variables-1"><span class="header-section-number">8.1.4</span> Template Variables</h3>
+<section id="built-in-variables" class="level4" data-number="8.1.4.1">
+<h4 data-number="8.1.4.1" data-anchor-id="built-in-variables"><span class="header-section-number">8.1.4.1</span> Built-in Variables</h4>
+<ul>
+<li><code>language</code>: Audio language (default: “en”)</li>
+<li><code>speakers</code>: Speaker detection flag (boolean)</li>
+<li><code>speaker_count</code>: Number of expected speakers (integer)</li>
+</ul>
+</section>
+<section id="custom-variables" class="level4" data-number="8.1.4.2">
+<h4 data-number="8.1.4.2" data-anchor-id="custom-variables"><span class="header-section-number">8.1.4.2</span> Custom Variables</h4>
+<p>Add custom variables using: - CLI: <code>--template-var KEY VALUE</code> - Python: <code>template_vars</code> dictionary</p>
+<p>Example template using custom variables:</p>
+<pre class="jinja"><code>{# technical.j2 #}
+Perform technical transcription with focus on:
+Language: {{language}}
+Domain: {{domain|default('general')}}
+Timestamp Interval: {{timestamp_interval|default(30)}} seconds
+
+{% if technical_terms %}
+Technical Terms Focus:
+- Preserve specialized vocabulary
+- Mark uncertain technical terms
+- Note mathematical formulas
+{% endif %}</code></pre>
+</section>
+</section>
+<section id="best-practices" class="level3" data-number="8.1.5">
+<h3 data-number="8.1.5" data-anchor-id="best-practices"><span class="header-section-number">8.1.5</span> Best Practices</h3>
+<ol type="1">
+<li><strong>Template Organization</strong>
+<ul>
+<li>Store user-specific templates in <code>~/.ai/templates/audio/</code></li>
+<li>Keep project-specific templates in <code>.ai/templates/audio/</code></li>
+<li>Use clear, descriptive template names</li>
+</ul></li>
+<li><strong>Template Design</strong>
+<ul>
+<li>Include clear documentation in templates</li>
+<li>Use Jinja2 defaults for optional variables</li>
+<li>Keep templates focused and modular</li>
+</ul></li>
+<li><strong>Error Handling</strong>
+<ul>
+<li>Use <code>--debug</code> for troubleshooting</li>
+<li>Check template paths when templates aren’t found</li>
+<li>Verify template variables are being passed correctly</li>
+</ul></li>
+<li><strong>Performance</strong>
+<ul>
+<li>Choose appropriate models for the task</li>
+<li>Use speaker detection only when needed</li>
+<li>Consider template complexity impact on processing time</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="visualization" class="level2" data-number="8.2">
+<h2 data-number="8.2" data-anchor-id="visualization"><span class="header-section-number">8.2</span> Visualization</h2>
+<section id="dashboard-creation" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" data-anchor-id="dashboard-creation"><span class="header-section-number">8.2.1</span> Dashboard Creation</h3>
+<pre><code>
+
+
+:::{#quarto-navigation-envelope .hidden}
+[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl"}
+[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU="}
+[&lt;span class='chapter-number'&gt;7&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;User Guide&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1wcmV2"}
+[&lt;span class='chapter-number'&gt;1&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;Introduction&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkludHJvZHVjdGlvbjwvc3Bhbj4="}
+[&lt;span class='chapter-number'&gt;2&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;AI Universe&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wMS1BSS1Vbml2ZXJzZS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4yPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLVVuaXZlcnNlPC9zcGFuPg=="}
+[&lt;span class='chapter-number'&gt;3&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;AI Ensemble&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wMi1BSS1FbnNlbWJsZS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4zPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLUVuc2VtYmxlPC9zcGFuPg=="}
+[&lt;span class='chapter-number'&gt;4&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;AI Models&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wMy1BSS1Nb2RlbHMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+NDwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BSS1Nb2RlbHM8L3NwYW4+"}
+[&lt;span class='chapter-number'&gt;5&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;AI Notebook&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNC1BSS1Ob3RlYm9vay5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz41PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFJLU5vdGVib29rPC9zcGFuPg=="}
+[&lt;span class='chapter-number'&gt;6&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;Setting up GitHub Pages&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNS1HaXRIdWItUGFnZXMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Njwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5TZXR0aW5nLXVwLUdpdEh1Yi1QYWdlczwvc3Bhbj4="}
+[&lt;span class='chapter-number'&gt;7&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;User Guide&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNi1Vc2VyLUd1aWRlLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjc8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+VXNlci1HdWlkZTwvc3Bhbj4="}
+[&lt;span class='chapter-number'&gt;8&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;Template Block&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNy1BUEkuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+ODwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5UZW1wbGF0ZS1CbG9jazwvc3Bhbj4="}
+[&lt;span class='chapter-number'&gt;8&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;Template Block&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+ODwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5UZW1wbGF0ZS1CbG9jazwvc3Bhbj4="}
+
+:::{.hidden .quarto-markdown-envelope-contents render-id="Zm9vdGVyLWNlbnRlcg=="}
+Copyright 2025, Gerd Graßhoff
+:::
+
+
+:::{.hidden .quarto-markdown-envelope-contents render-id="bWFyZ2luLWhlYWRlcg=="}
+
+:::{.margin-header-item}
+0
+:::
+
+:::
+
+:::
+
+
+
+:::{#quarto-meta-markdown .hidden}
+[[8]{.chapter-number}&nbsp; [Template Block]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLW1ldGF0aXRsZQ=="}
+[[8]{.chapter-number}&nbsp; [Template Block]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU="}
+[[8]{.chapter-number}&nbsp; [Template Block]{.chapter-title} – AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLW9nY2FyZHRpdGxl"}
+[AI Notebook Documentation]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ=="}
+[]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="}
+[]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLW9nY2FyZGRkZXNj"}
+:::
+
+
+
+
+&lt;!-- --&gt;
+
+::: {.quarto-embedded-source-code}
+```````````````````{.markdown shortcodes="false"}
+Your instruction text here</code></pre>
+<pre><code>
+### Template Block
+
+```yaml
+```ai
+---
+model: model_name
+template: template_name.j2
+files:
+  var_name: file_path
+---</code></pre>
+<pre><code>
+### Multi-Template Block
+
+```yaml
+```ai
+---
+model: model_name
+template:
+  - file: template1.j2
+    variables:
+      VAR1: value1
+  - file: template2.j2
+    variables:
+      VAR2: value2
+---</code></pre>
+<pre><code>
+## Templates
+
+Templates use Jinja2 syntax and support:
+
+- Variable interpolation: `{ variable }`
+- Control structures: `{% if condition %}...{% endif %}`
+- Loops: `{% for item in items %}...{% endfor %}`
+- Filters: `{ text | upper }`
+- Macros and includes
+
+Example template:
+
+```jinja
+{# analysis_template.j2 #}
+Analyze the following text using {{style}} approach:
+
+{{text}}
+
+Focus on:
+{% for point in focus_points %}
+- {{point}}
+{% endfor %}
+
+Additional context:
+{{context | default('No additional context provided')}}</code></pre>
+</section>
+</section>
+<section id="label-references-1" class="level2" data-number="8.3">
+<h2 data-number="8.3" data-anchor-id="label-references-1"><span class="header-section-number">8.3</span> Label References</h2>
+<p>Labels can be referenced within the same notebook or across notebooks:</p>
+<ul>
+<li>Same notebook: <code>{label_name}</code></li>
+<li>Cross-notebook: <code>{notebook:label_name}</code></li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="at">```ai</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span><span class="kw">:</span><span class="at"> claude-sonnet</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Compare</span><span class="kw">:</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="fu">1. Current Analysis</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at">{current_analysis</span><span class="kw">}</span><span class="at">}</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="fu">2. Historical Context</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="at">{history:context</span><span class="kw">}</span><span class="at">}</span></span></code></pre></div>
+<pre><code>
+## Audio Processing
+
+### Command Line Interface
+
+The `aiaudio` command provides a flexible interface for audio transcription with template support:
+
+```bash
+aiaudio [OPTIONS] FILE
+
+Arguments:
+  FILE                      Audio file to transcribe
+
+Options:
+  --model MODEL             Model to use (default: gemini-audio)
+  --language LANG          Language of the audio (default: en)
+  --speakers              Enable speaker detection
+  --speaker-count COUNT    Expected number of speakers
+  --template NAME         Template name to use (e.g., basic, detailed, transcribe)
+  --template-var KEY VALUE Template variables (can be used multiple times)
+  --list-templates        List available templates
+  --create-templates      Create default templates in ~/.ai/templates/audio
+  --template-path PATH    Additional path to look for templates
+  --overwrite            Overwrite existing output files
+  --output PATH          Output file path (default: process/input_file_audio.json)
+  --debug                Enable debug output
+  --version              Show version information</code></pre>
+<section id="basic-usage-examples-1" class="level4" data-number="8.3.0.1">
+<h4 data-number="8.3.0.1" data-anchor-id="basic-usage-examples-1"><span class="header-section-number">8.3.0.1</span> Basic Usage Examples</h4>
+<ol type="1">
+<li>Simple Transcription:</li>
+</ol>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic transcription with default settings (English, no speaker detection)</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># German transcription</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--language</span> de</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Using a specific model</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--model</span> whisper</span></code></pre></div>
+<ol start="2" type="1">
+<li>Speaker Detection:</li>
+</ol>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable speaker detection with 2 speakers</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> interview.mp3 <span class="at">--speakers</span> <span class="at">--speaker-count</span> 2</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># German transcription with speaker detection</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> interview.mp3 <span class="at">--language</span> de <span class="at">--speakers</span> <span class="at">--speaker-count</span> 3</span></code></pre></div>
+<ol start="3" type="1">
+<li>Using Templates:</li>
+</ol>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use transcribe template with speaker detection</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> lecture.mp3 <span class="at">--template</span> transcribe <span class="at">--speakers</span> <span class="at">--speaker-count</span> 2</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Detailed template with custom variables</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> lecture.mp3 <span class="at">--template</span> detailed <span class="dt">\</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">--template-var</span> domain <span class="st">"physics"</span> <span class="dt">\</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">--template-var</span> format <span class="st">"technical"</span></span></code></pre></div>
+<ol start="4" type="1">
+<li>Output Control:</li>
+</ol>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Custom output location</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--output</span> transcripts/result.json</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Force overwrite existing file</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> interview.mp3 <span class="at">--overwrite</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine output options</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> lecture.mp3 <span class="at">--output</span> results/transcript.json <span class="at">--overwrite</span></span></code></pre></div>
+<ol start="5" type="1">
+<li>Debug and Template Management:</li>
+</ol>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Show debug information</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--debug</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># List available templates</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> <span class="at">--list-templates</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co"># List templates with debug info</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> <span class="at">--list-templates</span> <span class="at">--debug</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create default templates</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> <span class="at">--create-templates</span></span></code></pre></div>
+</section>
+<section id="output-file-handling-1" class="level4" data-number="8.3.0.2">
+<h4 data-number="8.3.0.2" data-anchor-id="output-file-handling-1"><span class="header-section-number">8.3.0.2</span> Output File Handling</h4>
+<p>By default, transcription results are saved in a <code>process</code> directory next to the input file: - Input file: <code>path/to/example.mp3</code> - Default output: <code>path/to/process/example_audio.json</code></p>
+<p>You can control output handling in two ways: 1. Specify custom output path: <code>--output path/to/output.json</code> 2. Control overwriting: <code>--overwrite</code> flag</p>
+<p>If an output file already exists and <code>--overwrite</code> is not specified, the command will exit with an error message:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Output</span> file already exists: example_audio.json</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Use</span> <span class="at">--overwrite</span> to replace existing file</span></code></pre></div>
+</section>
+<section id="template-variables-2" class="level4" data-number="8.3.0.3">
+<h4 data-number="8.3.0.3" data-anchor-id="template-variables-2"><span class="header-section-number">8.3.0.3</span> Template Variables</h4>
+<p>Templates can access the following built-in variables: - <code>language</code>: The language specified (default: “en”) - <code>speakers</code>: Boolean indicating if speaker detection is enabled - <code>speaker_count</code>: Number of expected speakers (if speakers=True)</p>
+<p>Custom variables can be added using <code>--template-var</code>:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--template</span> transcribe <span class="dt">\</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--template-var</span> format <span class="st">"technical"</span> <span class="dt">\</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--template-var</span> timestamps <span class="st">"true"</span></span></code></pre></div>
+</section>
+<section id="debug-output-1" class="level4" data-number="8.3.0.4">
+<h4 data-number="8.3.0.4" data-anchor-id="debug-output-1"><span class="header-section-number">8.3.0.4</span> Debug Output</h4>
+<p>Using <code>--debug</code> shows detailed information about: - File paths and locations - Template search paths - Template variables - The exact prompt being sent to the model - Processing configuration - Progress updates</p>
+<p>Example debug output:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">aiaudio</span> recording.mp3 <span class="at">--template</span> transcribe <span class="at">--debug</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Paths:</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Input:</span> /absolute/path/to/recording.mp3</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Process</span> dir: /absolute/path/to/process</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Output:</span> /absolute/path/to/process/recording_audio.json</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Searching</span> for templates in:</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> /Users/username/.ai/templates</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> /Users/username/.ai/templates/audio</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a><span class="ex">Template</span> variables:</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  <span class="ex">language:</span> en</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  <span class="ex">speakers:</span> false</span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>  <span class="ex">speaker_count:</span> null</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a><span class="ex">Processing</span> configuration:</span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>  <span class="ex">model:</span> gemini-2.0-pro-exp-02-05</span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>  <span class="ex">language:</span> en</span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>  <span class="ex">speakers:</span> false</span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>  <span class="ex">template:</span> transcribe</span></code></pre></div>
+</section>
+<section id="template-locations-2" class="level4" data-number="8.3.0.5">
+<h4 data-number="8.3.0.5" data-anchor-id="template-locations-2"><span class="header-section-number">8.3.0.5</span> Template Locations</h4>
+<p>Templates are searched in the following order: 1. <code>~/.ai/templates/audio/</code> (user-specific) 2. <code>.ai/templates/audio/</code> (project-specific) 3. <code>templates/audio/</code> (local) 4. Custom paths specified via <code>--template-path</code></p>
+</section>
+<section id="template-management-1" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" data-anchor-id="template-management-1"><span class="header-section-number">8.3.1</span> Template Management</h3>
+<section id="listing-templates-1" class="level4" data-number="8.3.1.1">
+<h4 data-number="8.3.1.1" data-anchor-id="listing-templates-1"><span class="header-section-number">8.3.1.1</span> Listing Templates</h4>
+<p>Use <code>--list-templates</code> to see available templates:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> aiaudio <span class="at">--list-templates</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Available</span> templates:</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="ex">===================</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="ex">In</span> ~/.ai/templates/audio:</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> basic</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> detailed</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="co"># With debug information</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> aiaudio <span class="at">--list-templates</span> <span class="at">--debug</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Available</span> templates:</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="ex">===================</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="ex">In</span> ~/.ai/templates/audio:</span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> basic</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>    <span class="ex">Full</span> path: /Users/username/.ai/templates/audio/basic.j2</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> detailed</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">Full</span> path: /Users/username/.ai/templates/audio/detailed.j2</span></code></pre></div>
+</section>
+<section id="creating-default-templates-1" class="level4" data-number="8.3.1.2">
+<h4 data-number="8.3.1.2" data-anchor-id="creating-default-templates-1"><span class="header-section-number">8.3.1.2</span> Creating Default Templates</h4>
+<p>Initialize the default templates:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> aiaudio <span class="at">--create-templates</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Created</span> default templates in ~/.ai/templates/audio</span></code></pre></div>
+<p>This creates two default templates: - <code>basic.j2</code>: Simple transcription with basic formatting - <code>detailed.j2</code>: Detailed transcription with speaker detection and timestamps</p>
+</section>
+</section>
+<section id="python-api-1" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" data-anchor-id="python-api-1"><span class="header-section-number">8.3.2</span> Python API</h3>
+<p>The audio processing functionality can be accessed programmatically:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ainotebook <span class="im">import</span> process_audio</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic transcription</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>transcript <span class="op">=</span> process_audio(</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lecture.mp3"</span>,</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gemini-audio"</span>,</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    language<span class="op">=</span><span class="st">"en"</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Advanced usage with template</span></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>transcript <span class="op">=</span> process_audio(</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"interview.mp3"</span>,</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gemini-audio"</span>,</span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>    template<span class="op">=</span><span class="st">"detailed"</span>,</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>    template_vars<span class="op">=</span>{</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"focus"</span>: <span class="st">"technical_terms"</span>,</span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"timestamps"</span>: <span class="va">True</span>,</span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"domain"</span>: <span class="st">"physics"</span></span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a>    speakers<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>    speaker_count<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a>    debug<span class="op">=</span><span class="va">True</span>  <span class="co"># Enable debug output</span></span>
+<span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+</section>
+<section id="template-system-1" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" data-anchor-id="template-system-1"><span class="header-section-number">8.3.3</span> Template System</h3>
+<section id="template-locations-3" class="level4" data-number="8.3.3.1">
+<h4 data-number="8.3.3.1" data-anchor-id="template-locations-3"><span class="header-section-number">8.3.3.1</span> Template Locations</h4>
+<p>Templates are searched in the following order: 1. <code>~/.ai/templates/audio/</code> (user-specific) 2. <code>.ai/templates/audio/</code> (project-specific) 3. <code>templates/audio/</code> (local) 4. Custom paths specified via <code>--template-path</code></p>
+</section>
+<section id="default-templates-1" class="level4" data-number="8.3.3.2">
+<h4 data-number="8.3.3.2" data-anchor-id="default-templates-1"><span class="header-section-number">8.3.3.2</span> Default Templates</h4>
+<ol type="1">
+<li>Basic Template (<code>basic.j2</code>):</li>
+</ol>
+<pre class="jinja"><code>Transcribe the following audio file with these specifications:
+Language: {{language}}
+{% if speakers %}
+Detect speakers: Yes
+Number of speakers: {{speaker_count}}
+{% endif %}
+
+Additional instructions:
+- Maintain original punctuation
+- Include speaker labels if detected
+- Note unclear segments</code></pre>
+<ol start="2" type="1">
+<li>Detailed Template (<code>detailed.j2</code>):</li>
+</ol>
+<pre class="jinja"><code>Perform a detailed transcription of the audio with:
+Language: {{language}}
+{% if speakers %}
+Speaker detection enabled
+Expected speakers: {{speaker_count}}
+{% endif %}
+
+Focus on:
+- Accurate speaker attribution
+- Emotional tone and emphasis
+- Background sounds and context
+- Technical terminology precision
+- Time-stamped segments</code></pre>
+</section>
+</section>
+<section id="template-variables-3" class="level3" data-number="8.3.4">
+<h3 data-number="8.3.4" data-anchor-id="template-variables-3"><span class="header-section-number">8.3.4</span> Template Variables</h3>
+<section id="built-in-variables-1" class="level4" data-number="8.3.4.1">
+<h4 data-number="8.3.4.1" data-anchor-id="built-in-variables-1"><span class="header-section-number">8.3.4.1</span> Built-in Variables</h4>
+<ul>
+<li><code>language</code>: Audio language (default: “en”)</li>
+<li><code>speakers</code>: Speaker detection flag (boolean)</li>
+<li><code>speaker_count</code>: Number of expected speakers (integer)</li>
+</ul>
+</section>
+<section id="custom-variables-1" class="level4" data-number="8.3.4.2">
+<h4 data-number="8.3.4.2" data-anchor-id="custom-variables-1"><span class="header-section-number">8.3.4.2</span> Custom Variables</h4>
+<p>Add custom variables using: - CLI: <code>--template-var KEY VALUE</code> - Python: <code>template_vars</code> dictionary</p>
+<p>Example template using custom variables:</p>
+<pre class="jinja"><code>{# technical.j2 #}
+Perform technical transcription with focus on:
+Language: {{language}}
+Domain: {{domain|default('general')}}
+Timestamp Interval: {{timestamp_interval|default(30)}} seconds
+
+{% if technical_terms %}
+Technical Terms Focus:
+- Preserve specialized vocabulary
+- Mark uncertain technical terms
+- Note mathematical formulas
+{% endif %}</code></pre>
+</section>
+</section>
+<section id="best-practices-1" class="level3" data-number="8.3.5">
+<h3 data-number="8.3.5" data-anchor-id="best-practices-1"><span class="header-section-number">8.3.5</span> Best Practices</h3>
+<ol type="1">
+<li><strong>Template Organization</strong>
+<ul>
+<li>Store user-specific templates in <code>~/.ai/templates/audio/</code></li>
+<li>Keep project-specific templates in <code>.ai/templates/audio/</code></li>
+<li>Use clear, descriptive template names</li>
+</ul></li>
+<li><strong>Template Design</strong>
+<ul>
+<li>Include clear documentation in templates</li>
+<li>Use Jinja2 defaults for optional variables</li>
+<li>Keep templates focused and modular</li>
+</ul></li>
+<li><strong>Error Handling</strong>
+<ul>
+<li>Use <code>--debug</code> for troubleshooting</li>
+<li>Check template paths when templates aren’t found</li>
+<li>Verify template variables are being passed correctly</li>
+</ul></li>
+<li><strong>Performance</strong>
+<ul>
+<li>Choose appropriate models for the task</li>
+<li>Use speaker detection only when needed</li>
+<li>Consider template complexity impact on processing time</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="visualization-1" class="level2" data-number="8.4">
+<h2 data-number="8.4" data-anchor-id="visualization-1"><span class="header-section-number">8.4</span> Visualization</h2>
+<section id="dashboard-creation-1" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" data-anchor-id="dashboard-creation-1"><span class="header-section-number">8.4.1</span> Dashboard Creation</h3>
+<pre><code></code></pre>
+<p>:::</p>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+});
+</script>
+<nav class="page-navigation column-page-right">
+  <div class="nav-page nav-page-previous">
+      <a href="./06-User-Guide.html" class="pagination-link" aria-label="User Guide">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">User Guide</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <div class="footer-contents">Copyright 2025, Gerd Graßhoff</div>  
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
